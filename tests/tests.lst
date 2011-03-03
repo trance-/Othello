@@ -1,0 +1,28 @@
+./a.exe 2 | tee output/2-autodepth.out
+./a.exe 2 1 | tee output/2-depth1.out
+./a.exe 2 2 | tee output/2-depth2.out
+./a.exe 2 3 | tee output/2-depth3.out
+./a.exe 2 4 | tee output/2-depth4.out
+./a.exe 2 5 | tee output/2-depth5.out
+./a.exe 2 6 1 1 15 | tee output/2-depth6.out
+./a.exe 3 | tee output/3-autodepth.out
+./a.exe 3 1 | tee output/3-depth1.out
+./a.exe 3 2 | tee output/3-depth2.out
+./a.exe 3 3 | tee output/3-depth3.out
+./a.exe 3 4 | tee output/3-depth4.out
+./a.exe 3 5 | tee output/3-depth5.out
+./a.exe 3 6 1 1 15 | tee output/3-depth6.out
+./a.exe 2 0 0 | tee output/2-autodepth-rev.out
+./a.exe 2 1 0 | tee output/2-depth1-rev.out
+./a.exe 2 2 0 | tee output/2-depth2-rev.out
+./a.exe 2 3 0 | tee output/2-depth3-rev.out
+./a.exe 2 4 0 | tee output/2-depth4-rev.out
+./a.exe 2 5 0 | tee output/2-depth5-rev.out
+./a.exe 2 6 0 | tee output/2-depth6-rev.out
+./a.exe 3 0 0 | tee output/3-autodepth-rev.out
+./a.exe 3 1 0 | tee output/3-depth1-rev.out
+./a.exe 3 2 0 | tee output/3-depth2-rev.out
+./a.exe 3 3 0 | tee output/3-depth3-rev.out
+./a.exe 3 4 0 | tee output/3-depth4-rev.out
+./a.exe 3 5 0 | tee output/3-depth5-rev.out
+./a.exe 3 6 0 1 15 | tee output/3-depth6-rev.out
