@@ -17,11 +17,14 @@ public:
 
     State( Othello & argBoard, bool argColor, int argMove, int b = 0, int w = 0);
 
-    int eval( int color );
+    void eval( int color );
 
     friend class Othello;
 };
 
+void State::eval( int color ) {
+    value = value*color;
+}
 State::State( Othello & argBoard, bool argColor, int argMove, int b, int w):
     move( argMove ),
     color( argColor ),
@@ -33,87 +36,7 @@ State::State( Othello & argBoard, bool argColor, int argMove, int b, int w):
         vector<int> movesOpp;
         argBoard.FindValidMoves( color, moves );
         argBoard.FindValidMoves( !color, movesOpp );
-        /*if (color) {
-            bx += moves.size() * 2;
-            wx += movesOpp.size() * 2;
-        } else {
-            wx += moves.size() * 2;
-            bx += movesOpp.size() * 2;
-        }
-        */
-        /*for ( int i = 0; i < SIZE*SIZE; i++) {
-            if (argBoard.board[i] == 1) {
-                switch (i) {
-                case 0:
-                case 7:
-                case 63:
-                case 56:
-                    bx += 20;
-                    break;
-                case 1:
-                case 8:
-                case 9:
-                    if (argBoard.board[0] != 1) 
-                        bx -= 5;
-                    break;
-                case 6:
-                case 14:
-                case 15:
-                    if (argBoard.board[7] != 1) 
-                        bx -= 5;
-                    break;
-                case 54:
-                case 55:
-                case 62:
-                    if (argBoard.board[63] != 1) 
-                        bx -= 5;
-                    break;
-                case 48:
-                case 49:
-                case 57:
-                    if (argBoard.board[56] != 1) 
-                        bx -= 5;
-                    break;
-                }
-                b++;
-            } else if (argBoard.board[i] == 2) {
-                switch (i) {
-                case 0:
-                case 7:
-                case 63:
-                case 56:
-                    wx += 20;
-                    break;
-                case 1:
-                case 8:
-                case 9:
-                    if (argBoard.board[0] != 2) 
-                        wx -= 5;
-                    break;
-                case 6:
-                case 14:
-                case 15:
-                    if (argBoard.board[7] != 2) 
-                        wx -= 5;
-                    break;
-                case 54:
-                case 55:
-                case 62:
-                    if (argBoard.board[63] != 2) 
-                        wx -= 5;
-                    break;
-                case 48:
-                case 49:
-                case 57:
-                    if (argBoard.board[56] != 2) 
-                        wx -= 5;
-                    break;
-                }
-                w++;
-            }
-        }
-        */
- 	static int
+	static int
 		val1[3]={-30,0,0},	/* value of (1,1) if (0,0)=0,1,2 */
 		val2[3]={-4,0,0},	/* value of (1,2) if (0,2)=0,1,2 */
 		val3[3]={-5,0,0};	/* value of (1,3) if (0,3)=0,1,2 */
@@ -184,10 +107,11 @@ void printNode( GameTree<State>::iterator itr ) {
 }
  
 void print( GameTree<State>::iterator itr, int n ) {
+    if ( n == 0 ) return;
     printNode( itr );
     cout << endl;
     for ( GameTree<State>::iterator child = itr.begin(); child != itr.end(); ++child ) {
-        print( child, n + 1 );
+        print( child, n - 1 );
     }
 }
 
@@ -223,19 +147,32 @@ pair<int, int> find_best( GameTree<State>::iterator itr, int d, int a, int b, in
         printNode(itr);
         cout << " d: " << d << " a: " << a << " b: " << b << " color: " << color;
     }
-    if (itr.leaf() || d == 0) {
-        return make_pair(color * (*itr).value, (*itr).move);
+    if (itr.leaf() || d == (color ? 0 : 1)) {
+        (*itr).eval(color);
+        return make_pair((*itr).value, (*itr).move);
     } else {
         int move = (*itr.begin()).move;
         for ( GameTree<State>::iterator child = itr.begin(); child != itr.end(); ++child ) {
-            pair<int, int> eval = find_best(child, d-1, -b, -a, -color);
-            //cout << " : " << a << " " << eval.first;
-            if (-eval.first > a) {
+            if (g_verbose == 1) {
+                cout << endl;
+                for ( int i = 0; i < itr.depth()+1; ++i) {
+                    std::cout << "\t";
+                }
+                cout << "Entering " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": a = " << a << " b = " << b ;
+            }
+            pair<int, int> eval = find_best(child, d-1, -b, -a, color);
+            if (g_verbose == 1) {
+                cout << endl;
+                for ( int i = 0; i < itr.depth()+1; ++i) {
+                    std::cout << "\t";
+                }
+                cout << "Leaving " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": ret = " << eval.first << " a = " << a << " b = " << b << endl;
+            }
+             if (-eval.first > a) {
                 move = (*child).move;
                 a = -eval.first;
             }
-            //a = max(a, -eval.first);
-            if (a >= b) {
+           if (a >= b) {
                 break;
             }
         }

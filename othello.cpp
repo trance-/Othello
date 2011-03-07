@@ -49,7 +49,6 @@ void clear_screen() {
     }
 }
 
-
 using namespace Data_structures;
 #include "othello.h"
 
@@ -105,8 +104,6 @@ int game_start() {
                             string input = "";
                             int move = 0;
                             getline(cin, input);
-                            //stringstream num(input);
-                            //num >> move;
                             int x = (int)input[0] - 97;
                             int y = (int)input[1] - 49;
 
