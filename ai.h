@@ -201,15 +201,15 @@ pair<int, int> timesearch( GameTree<State>::iterator itr, Othello board, int col
     /* Initialize the clock. */
     clock_t temp = clock() - init;
 
-    int d = 1;
+    int d = (g_shrinkwindow ? 1 : 1);
     pair<int, int> optimal;
+    
+    int window = 1000;
 
     double curtime = (double)temp / ((double)CLOCKS_PER_SEC);
     while (curtime < g_timeout) { /* Loop until we run out of time. */
-        cout <<"Time remaining. Increasing depth to " << d + 1 << endl;
-
-        /* Increase depth and run the search again. */
-        pair<int, int> tempmove = gensearch( itr, board, d++, -1000, 1000, color);
+        /* Run the search again and increase depth. */
+        pair<int, int> tempmove = gensearch( itr, board, d++, -window, 1000, color);
 
         temp = clock() - init;
         curtime = (double)temp / ((double)CLOCKS_PER_SEC);
@@ -217,8 +217,20 @@ pair<int, int> timesearch( GameTree<State>::iterator itr, Othello board, int col
         /* Only update the optimal move if the previous search finished. */
         if (curtime < g_timeout) { 
             optimal = tempmove;
+
+            /* If shrink window is enabled, set the cutoff for the score to the current best, so we only search
+             * branches of the tree if they are better than the current best. */
+            if (g_shrinkwindow) {
+                window = min(window, abs(tempmove.first));
+                if (g_verbose >= 1) 
+                    cout << "Time remaining. Increasing depth to " << d << " and shrinking window to " << window << "." << endl;
+            } else {
+                if (g_verbose >= 1) 
+                    cout << "Time remaining. Increasing depth to " << d << "." << endl;
+            }
         }
     }
+    cout << "Final search depth: " << (g_shrinkwindow ? d - 2 : d - 1) << endl;
     return optimal;
 }
 

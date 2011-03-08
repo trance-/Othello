@@ -30,6 +30,8 @@ Arguments:
     -T
             Sets AI to time-limited mode. If set, the AI will continue to increase the
             search depth until it runs out of time.
+    -w
+            Disables shrinking search window in time-limited search mode.           
     -c
             If set, the screen will be cleared after each turn.
     -v #

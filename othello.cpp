@@ -16,11 +16,12 @@
 int g_auto = 0;
 int g_searchdepth = 0;
 bool g_gofirst = true;
-bool g_clearscreen = true;
+bool g_clearscreen = false;
 int g_turn = 0;
 int g_verbose = 0;
 double g_timeout = 30;
 bool g_timemode = false;
+bool g_shrinkwindow = true;
 
 using namespace std;
 using namespace Data_structures;
@@ -170,11 +171,12 @@ void halp() {
         "\t\t2 = always select first move; 3 = AI controlled." << endl << endl <<
         "\t-f"   << endl << "\t\tIf set, the opponent will get the first move. Otherwise, the player will go first." << endl << endl <<
         "\t-d #" << endl << "\t\tSets the AI search depth. If 0, the AI will select a depth based on the current move number." << endl <<
-        "\t\tIf -1, the AI will randomly pick moves." << endl << endl << 
+                            "\t\tIf -1, the AI will randomly pick moves." << endl << endl << 
         "\t-t #" << endl << "\t\tSets the AI search timeout, in seconds. The AI will stop calculating a move if " << endl <<
-        "\t\tit exceeds this time." << endl << endl <<
+                            "\t\tit exceeds this time." << endl << endl <<
         "\t-T"   << endl << "\t\tSets AI to time-limited mode. If set, the AI will continue to increase the " << endl <<
-        "\t\tsearch depth until it runs out of time." << endl << endl <<
+                            "\t\tsearch depth until it runs out of time." << endl << endl <<
+        "\t-w"   << endl << "\t\tDisables shrinking search window in time-limited search mode." << endl <<
         "\t-c"   << endl << "\t\tIf set, the screen will be cleared after each turn." << endl << endl <<
         "\t-v #" << endl << "\t\tSets the verbosity. A higher number will be more verbose." << endl << endl <<
         "\t-h"   << endl << "\t\tDisplays this help message." << endl;
@@ -198,6 +200,8 @@ int main(int argc, char **argv) {
             g_timeout = atoi(argv[++i]);
         } else if (sw=="-T") {  /* AI time-limited mode. */
             g_timemode = true;
+        } else if (sw=="-w") {  /* Shrink search window. */
+            g_shrinkwindow = false;
         } else if (sw=="-v") {  /* Message verbosity. */
             g_verbose = atoi(argv[++i]);
         } else if (sw=="-h") {  /* Display help message. */
@@ -225,7 +229,8 @@ int main(int argc, char **argv) {
         "  Verbosity:    \t"   << g_verbose << endl <<
         "  AI max depth: \t"   << g_searchdepth << (g_searchdepth == 0 ? " (based on move number)" : " (fixed)" ) << endl <<
         "  AI timeout:   \t"   << g_timeout << " seconds." << endl <<
-        "  AI time mode: \t"   << (g_timemode ? "Time-limited" : "Depth-limited") << endl;
+        "  AI time mode: \t"   << (g_timemode ? "Time-limited" : "Depth-limited") << endl <<
+        "  Shrink win.:  \t"   << (g_shrinkwindow ? "Yes" : "No") << endl;
 
     /* Start the game. */
     return game_start();
