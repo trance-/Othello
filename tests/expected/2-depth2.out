@@ -1,7 +1,5 @@
-OTHELLO
-Settings: 
   Play mode:    	automatic
-  Player color: 	black(@)
+  Player first: 	Yes
   Clear screen: 	Yes
   Verbosity:    	0
   AI max depth: 	2 (fixed)
@@ -21,6 +19,8 @@ Score: 2-2
 
 Valid moves: e3  f4  c5  d6  
 
+Player moves: e3
+
   a b c d e f g h
 1 . . . . . . . .
 2 . . . . . . . .
@@ -35,7 +35,7 @@ Score: 4-1
 Valid moves: d3  f3  f5  
 Depth: 2
 
-Examined 11/18 game states in 0.015 s.
+Examined 11/18 game states in 0.007 s.
 
 Opponent moves: d3
 
@@ -52,6 +52,8 @@ Score: 3-3
 
 Valid moves: c2  c3  c4  c5  c6  
 
+Player moves: c2
+
   a b c d e f g h
 1 . . . . . . . .
 2 . . @ * . * . .
@@ -66,7 +68,7 @@ Score: 5-2
 Valid moves: d2  f2  f3  f4  f5  f6  
 Depth: 2
 
-Examined 34/42 game states in 0 s.
+Examined 34/42 game states in 0.004 s.
 
 Opponent moves: f6
 
@@ -83,6 +85,8 @@ Score: 4-4
 
 Valid moves: c4  c5  c6  d6  e6  
 
+Player moves: c4
+
   a b c d e f g h
 1 . . . . . . . .
 2 . . @ * * . . .
@@ -97,7 +101,7 @@ Score: 6-3
 Valid moves: d2  e2  b3  c3  f3  
 Depth: 2
 
-Examined 33/38 game states in 0 s.
+Examined 33/38 game states in 0.004 s.
 
 Opponent moves: c3
 
@@ -114,6 +118,8 @@ Score: 5-5
 
 Valid moves: b3  c5  c6  d6  e6  
 
+Player moves: b3
+
   a b c d e f g h
 1 . . . . . . . .
 2 * * @ * * * . .
@@ -128,7 +134,7 @@ Score: 7-4
 Valid moves: a2  b2  d2  e2  f2  f3  b4  f4  
 Depth: 2
 
-Examined 51/66 game states in 0 s.
+Examined 51/66 game states in 0.006 s.
 
 Opponent moves: f4
 
@@ -145,6 +151,8 @@ Score: 6-6
 
 Valid moves: g4  c5  f5  g5  d6  e6  g7  
 
+Player moves: g4
+
   a b c d e f g h
 1 . . . . . . . .
 2 * * @ * * . . .
@@ -159,7 +167,7 @@ Score: 10-3
 Valid moves: a2  b2  d2  e2  f3  g3  
 Depth: 2
 
-Examined 39/51 game states in 0 s.
+Examined 39/51 game states in 0.013 s.
 
 Opponent moves: f3
 
@@ -176,6 +184,8 @@ Score: 9-5
 
 Valid moves: e2  f2  g3  f5  d6  e6  g7  
 
+Player moves: e2
+
   a b c d e f g h
 1 . * . . * . . .
 2 * * @ * @ . * .
@@ -190,7 +200,7 @@ Score: 11-4
 Valid moves: b1  e1  a2  b2  d2  g2  g3  b4  h4  
 Depth: 2
 
-Examined 48/81 game states in 0 s.
+Examined 48/81 game states in 0.008 s.
 
 Opponent moves: h4
 
@@ -207,6 +217,8 @@ Score: 9-7
 
 Valid moves: f5  g5  h5  c6  d6  e6  g7  
 
+Player moves: f5
+
   a b c d e f g h
 1 . . . * * . . .
 2 * * @ * @ * * .
@@ -221,7 +233,7 @@ Score: 12-5
 Valid moves: d1  e1  a2  b2  d2  f2  g2  g3  b4  g5  e6  
 Depth: 2
 
-Examined 37/121 game states in 0 s.
+Examined 37/121 game states in 0.018 s.
 
 Opponent moves: d1
 
@@ -238,6 +250,8 @@ Score: 10-8
 
 Valid moves: e1  f1  f2  g2  g3  h3  c5  c6  d6  e6  f7  g7  
 
+Player moves: e1
+
   a b c d e f g h
 1 . . . O @ * . .
 2 * * @ * @ . . .
@@ -252,7 +266,7 @@ Score: 12-7
 Valid moves: f1  a2  b2  d2  a3  g3  a4  b4  g5  e6  
 Depth: 2
 
-Examined 31/141 game states in 0 s.
+Examined 31/141 game states in 0.01 s.
 
 Opponent moves: f1
 
@@ -269,6 +283,8 @@ Score: 11-9
 
 Valid moves: f2  g2  g3  h3  c5  h5  c6  d6  e6  f7  g7  
 
+Player moves: f2
+
   a b c d e f g h
 1 . . . O O O . .
 2 * * @ * @ @ * .
@@ -283,7 +299,7 @@ Score: 13-8
 Valid moves: a2  b2  d2  g2  g3  a4  b4  b5  g5  e6  
 Depth: 2
 
-Examined 64/109 game states in 0 s.
+Examined 64/109 game states in 0.016 s.
 
 Opponent moves: e6
 
@@ -300,6 +316,8 @@ Score: 12-10
 
 Valid moves: h5  c6  d6  g6  e7  f7  g7  
 
+Player moves: h5
+
   a b c d e f g h
 1 . * . O O O . .
 2 * * @ * @ @ * .
@@ -314,7 +332,7 @@ Score: 14-9
 Valid moves: b1  a2  b2  d2  g2  g3  h3  a4  b4  b5  h6  
 Depth: 2
 
-Examined 75/122 game states in 0 s.
+Examined 75/122 game states in 0.01 s.
 
 Opponent moves: h6
 
@@ -331,6 +349,8 @@ Score: 13-11
 
 Valid moves: c6  d6  g6  d7  e7  f7  g7  
 
+Player moves: c6
+
   a b c d e f g h
 1 . * . O O O . .
 2 * * @ . @ @ . .
@@ -345,7 +365,7 @@ Score: 15-10
 Valid moves: b1  a2  b2  g3  h3  a4  b4  b5  c5  
 Depth: 2
 
-Examined 48/90 game states in 0 s.
+Examined 48/90 game states in 0.014 s.
 
 Opponent moves: h3
 
@@ -362,6 +382,8 @@ Score: 14-12
 
 Valid moves: g5  d6  g6  e7  f7  g7  
 
+Player moves: g5
+
   a b c d e f g h
 1 . . . O O O . .
 2 * * @ * @ @ . .
@@ -376,7 +398,7 @@ Score: 17-10
 Valid moves: a2  b2  d2  g3  a4  b4  b5  c5  g6  
 Depth: 2
 
-Examined 47/78 game states in 0 s.
+Examined 47/78 game states in 0.007 s.
 
 Opponent moves: g3
 
@@ -393,6 +415,8 @@ Score: 16-12
 
 Valid moves: g1  g2  h2  d7  e7  f7  g7  
 
+Player moves: g1
+
   a b c d e f g h
 1 . . . O O O @ *
 2 * * @ * @ @ . .
@@ -407,7 +431,7 @@ Score: 18-11
 Valid moves: h1  a2  b2  d2  a3  a4  b4  b5  c5  d6  g6  
 Depth: 2
 
-Examined 28/111 game states in 0 s.
+Examined 28/111 game states in 0.009 s.
 
 Opponent moves: h1
 
@@ -424,6 +448,8 @@ Score: 17-13
 
 Valid moves: g2  h2  d7  e7  f7  g7  
 
+Player moves: g2
+
   a b c d e f g h
 1 . . . O O O O O
 2 * * @ * @ @ @ .
@@ -438,7 +464,7 @@ Score: 20-11
 Valid moves: a2  b2  d2  a3  a4  b4  b5  c5  g6  b7  
 Depth: 2
 
-Examined 46/85 game states in 0 s.
+Examined 46/85 game states in 0.008 s.
 
 Opponent moves: a3
 
@@ -455,6 +481,8 @@ Score: 14-18
 
 Valid moves: a2  b2  d2  h2  a4  d7  e7  f7  g7  
 
+Player moves: a2
+
   a b c d e f g h
 1 * * * O O O O O
 2 @ . @ . @ @ @ .
@@ -469,7 +497,7 @@ Score: 16-17
 Valid moves: a1  b1  c1  a4  b4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 27/104 game states in 0 s.
+Examined 27/104 game states in 0.013 s.
 
 Opponent moves: a1
 
@@ -486,6 +514,8 @@ Score: 15-19
 
 Valid moves: b2  d2  h2  d7  e7  f7  g7  
 
+Player moves: b2
+
   a b c d e f g h
 1 O * * O O O O O
 2 O @ @ * @ @ @ .
@@ -500,7 +530,7 @@ Score: 17-18
 Valid moves: b1  c1  d2  a4  b4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 33/91 game states in 0 s.
+Examined 33/91 game states in 0.019 s.
 
 Opponent moves: c1
 
@@ -517,6 +547,8 @@ Score: 16-20
 
 Valid moves: b1  d2  h2  d7  e7  f7  g7  
 
+Player moves: b1
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ @ * @ @ @ .
@@ -531,7 +563,7 @@ Score: 18-19
 Valid moves: d2  a4  b4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 27/73 game states in 0 s.
+Examined 27/73 game states in 0.014 s.
 
 Opponent moves: a4
 
@@ -548,6 +580,8 @@ Score: 16-22
 
 Valid moves: d2  h2  b4  d7  e7  f7  g7  
 
+Player moves: d2
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ @ @ @ @ @ *
@@ -562,7 +596,7 @@ Score: 20-19
 Valid moves: h2  b4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 20/59 game states in 0 s.
+Examined 20/59 game states in 0.006 s.
 
 Opponent moves: h2
 
@@ -579,6 +613,8 @@ Score: 14-26
 
 Valid moves: b4  d7  e7  f7  g7  
 
+Player moves: b4
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -593,7 +629,7 @@ Score: 17-24
 Valid moves: a5  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 17/41 game states in 0 s.
+Examined 17/41 game states in 0.008 s.
 
 Opponent moves: a5
 
@@ -610,6 +646,8 @@ Score: 15-27
 
 Valid moves: b5  d7  e7  f7  g7  
 
+Player moves: b5
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -624,7 +662,7 @@ Score: 17-26
 Valid moves: c5  a6  d6  g6  b7  d7  
 Depth: 2
 
-Examined 24/43 game states in 0 s.
+Examined 24/43 game states in 0.002 s.
 
 Opponent moves: a6
 
@@ -641,6 +679,8 @@ Score: 14-30
 
 Valid moves: b6  d7  e7  f7  g7  
 
+Player moves: b6
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -655,7 +695,7 @@ Score: 16-29
 Valid moves: c5  d6  g6  b7  c7  d7  
 Depth: 2
 
-Examined 25/42 game states in 0 s.
+Examined 25/42 game states in 0.01 s.
 
 Opponent moves: d6
 
@@ -672,6 +712,8 @@ Score: 10-36
 
 Valid moves: c5  b7  d7  e7  f7  g7  
 
+Player moves: c5
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -686,7 +728,7 @@ Score: 14-33
 Valid moves: g6  
 Depth: 2
 
-Examined 10/10 game states in 0 s.
+Examined 10/10 game states in 0.001 s.
 
 Opponent moves: g6
 
@@ -703,6 +745,8 @@ Score: 10-38
 
 Valid moves: a7  b7  c7  d7  e7  f7  g7  h7  
 
+Player moves: a7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -717,7 +761,7 @@ Score: 12-37
 Valid moves: c7  a8  
 Depth: 2
 
-Examined 18/18 game states in 0 s.
+Examined 18/18 game states in 0.005 s.
 
 Opponent moves: a8
 
@@ -734,6 +778,8 @@ Score: 11-39
 
 Valid moves: b7  c7  d7  e7  f7  g7  h7  
 
+Player moves: b7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -748,7 +794,7 @@ Score: 13-38
 Valid moves: c7  d7  c8  
 Depth: 2
 
-Examined 23/23 game states in 0 s.
+Examined 23/23 game states in 0.002 s.
 
 Opponent moves: c8
 
@@ -765,6 +811,8 @@ Score: 12-40
 
 Valid moves: c7  d7  e7  f7  g7  h7  b8  
 
+Player moves: c7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -779,7 +827,7 @@ Score: 14-39
 Valid moves: d7  e7  b8  d8  
 Depth: 2
 
-Examined 28/28 game states in 0 s.
+Examined 28/28 game states in 0.006 s.
 
 Opponent moves: d8
 
@@ -796,6 +844,8 @@ Score: 12-42
 
 Valid moves: e7  f7  g7  h7  b8  
 
+Player moves: e7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -810,7 +860,7 @@ Score: 14-41
 Valid moves: d7  f7  e8  f8  
 Depth: 2
 
-Examined 22/23 game states in 0 s.
+Examined 22/23 game states in 0.006 s.
 
 Opponent moves: f8
 
@@ -827,6 +877,8 @@ Score: 10-46
 
 Valid moves: d7  g7  h7  b8  e8  
 
+Player moves: d7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -841,7 +893,7 @@ Score: 12-45
 Valid moves: f7  e8  
 Depth: 2
 
-Examined 11/11 game states in 0 s.
+Examined 11/11 game states in 0.003 s.
 
 Opponent moves: e8
 
@@ -858,6 +910,8 @@ Score: 9-49
 
 Valid moves: g7  h7  b8  
 
+Player moves: g7
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ O O O O O O
@@ -872,7 +926,7 @@ Score: 11-48
 Valid moves: f7  g8  h8  
 Depth: 2
 
-Examined 10/12 game states in 0 s.
+Examined 10/12 game states in 0.002 s.
 
 Opponent moves: h8
 
@@ -888,6 +942,8 @@ Opponent moves: h8
 Score: 7-53
 
 Valid moves: h7  b8  
+
+Player moves: h7
 
   a b c d e f g h
 1 O @ O O O O O O
@@ -920,6 +976,8 @@ Score: 10-52
 
 Valid moves: b8  g8  
 
+Player moves: b8
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ @ O O O O O
@@ -944,6 +1002,8 @@ Score: 16-47
 
 Valid moves: g8  
 
+Player moves: g8
+
   a b c d e f g h
 1 O @ O O O O O O
 2 O @ @ O O O O O
@@ -957,4 +1017,4 @@ Score: 25-39
 YOU LOSE. PLAY AGAIN
 Game over.
 
-Game took 1.234 s.
+Game took 1.67 s.

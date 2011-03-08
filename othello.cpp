@@ -26,6 +26,7 @@ bool g_clearscreen = true;
 int g_turn = 0;
 int g_verbose = VERBOSE;
 double g_timeout = 30;
+int g_timemode = 0;
 
 const char DIRS[8][2] = {{1, 0}, {1, 1}, {0, 1}, {-1, 1}, {-1, 0}, {-1, -1}, {0, -1}, {1, -1}};
  
@@ -117,10 +118,13 @@ int game_start() {
                         } while (!moveGood);
                     } else if (g_auto == 1) {
                         pos = moves[rand() % moves.size()];
+                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
                     } else if (g_auto == 2) {
                         pos = moves[0];
+                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
                     } else {
                         pos = ai_initialize( board, true );
+                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
                     }
                     clear_screen();
                 }
@@ -180,13 +184,16 @@ int main(int argc, char **argv) {
             g_timeout = atoi(argv[5]);
         }
         if (argc >= 7) {
-            g_verbose = atoi(argv[6]);
+            g_timemode = atoi(argv[6]);
+        }
+        if (argc >= 8) {
+            g_verbose = atoi(argv[7]);
         }
 
         cout << "OTHELLO" << endl;
         cout << "Settings: " << endl <<
             "  Play mode:    \t"   << (g_auto == 0 ? "manual" : "automatic") << endl <<
-            "  Player color: \t"   << (g_gofirst ? "black(@)" : "white(O)") << endl <<
+            "  Player first: \t"   << (g_gofirst ? "Yes" : "No") << endl <<
             "  Clear screen: \t"   << (g_clearscreen ? "Yes" : "No" ) << endl <<
             "  Verbosity:    \t"   << g_verbose << endl <<
             "  AI max depth: \t"   << g_searchdepth << (g_searchdepth == 0 ? " (based on move number)" : " (fixed)" ) << endl <<

@@ -17,14 +17,9 @@ public:
 
     State( Othello & argBoard, bool argColor, int argMove, int b = 0, int w = 0);
 
-    void eval( int color );
-
     friend class Othello;
 };
 
-void State::eval( int color ) {
-    value = value*color;
-}
 State::State( Othello & argBoard, bool argColor, int argMove, int b, int w):
     move( argMove ),
     color( argColor ),
@@ -91,12 +86,12 @@ State::State( Othello & argBoard, bool argColor, int argMove, int b, int w):
 
 
 using namespace Data_structures;
-void printNode( GameTree<State>::iterator itr ) {
+void printNode( GameTree<State>::iterator itr, int color ) {
     for ( int i = 0; i < itr.depth(); ++i) {
         std::cout << "\t";
     }
      std::cout << "Move: " << (char)((*itr).move%SIZE + 97) << (*itr).move/SIZE + 1 << ((*itr).color ? " O" : " @")
-        << " Value: " << (*itr).value << 
+        << " Value: " << color*(*itr).value << 
         "  (depth " << itr.depth() <<
         ", size " << itr.size() <<
         ", height " << itr.height() <<
@@ -106,21 +101,15 @@ void printNode( GameTree<State>::iterator itr ) {
         ")";
 }
  
-void print( GameTree<State>::iterator itr, int n ) {
-    if ( n == 0 ) return;
-    printNode( itr );
-    cout << endl;
-    for ( GameTree<State>::iterator child = itr.begin(); child != itr.end(); ++child ) {
-        print( child, n - 1 );
+pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, int a, int b, int color) {
+    search_count++;
+    if (g_verbose == 1) {
+        cout << endl;
+        printNode(itr, color);
+        cout << " d: " << d << " a: " << a << " b: " << b << " color: " << color;
     }
-}
-
-void treegen( GameTree<State>::iterator itr, int d, Othello board ) {
-    if (d == 0) return;
-    clock_t temp = clock()-init;
-
-    if (!itr.root() && (double)temp / ((double)CLOCKS_PER_SEC) > g_timeout) 
-        return; 
+    clock_t temp = clock() - init;
+    if (d == 0 || (double)temp / ((double)CLOCKS_PER_SEC) > g_timeout) return make_pair(color*(*itr).value, (*itr).move);
 
     for (int i = 0; i < (*itr).moves.size(); i++) {
         Othello tmp (board.MakeMove( (*itr).color, (*itr).moves[i] ));
@@ -135,77 +124,86 @@ void treegen( GameTree<State>::iterator itr, int d, Othello board ) {
         tree_count++;
     }
 
+    int move = (*itr.begin()).move;
     for ( GameTree<State>::iterator child = itr.begin(); child != itr.end(); ++child ) {
-        treegen( child, d - 1, board.MakeMove( !(*child).color, (*child).move ));
-    }
-}
-
-pair<int, int> find_best( GameTree<State>::iterator itr, int d, int a, int b, int color) {
-    search_count++;
-    if (g_verbose == 1) {
-        cout << endl;
-        printNode(itr);
-        cout << " d: " << d << " a: " << a << " b: " << b << " color: " << color;
-    }
-    if (itr.leaf() || d == (color ? 0 : 1)) {
-        (*itr).eval(color);
-        return make_pair((*itr).value, (*itr).move);
-    } else {
-        int move = (*itr.begin()).move;
-        for ( GameTree<State>::iterator child = itr.begin(); child != itr.end(); ++child ) {
-            if (g_verbose == 1) {
-                cout << endl;
-                for ( int i = 0; i < itr.depth()+1; ++i) {
-                    std::cout << "\t";
-                }
-                cout << "Entering " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": a = " << a << " b = " << b ;
-            }
-            pair<int, int> eval = find_best(child, d-1, -b, -a, color);
-            if (g_verbose == 1) {
-                cout << endl;
-                for ( int i = 0; i < itr.depth()+1; ++i) {
-                    std::cout << "\t";
-                }
-                cout << "Leaving " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": ret = " << eval.first << " a = " << a << " b = " << b << endl;
-            }
-             if (-eval.first > a) {
-                move = (*child).move;
-                a = -eval.first;
-            }
-           if (a >= b) {
-                break;
-            }
-        }
         if (g_verbose == 1) {
             cout << endl;
-            for ( int i = 0; i < itr.depth(); ++i) {
+            for ( int i = 0; i < itr.depth()+1; ++i) {
                 std::cout << "\t";
             }
-            cout << " d: " << d << " a: " << a << " b: " << b << " move: " << (char)((*itr).move%SIZE + 97) << (*itr).move/SIZE + 1 ;
+            cout << "Entering " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": a = " << a << " b = " << b ;
         }
-        return make_pair(a, move);
+
+        pair<int, int> eval = gensearch(child, board.MakeMove( !(*child).color, (*child).move), d-1, -b, -a, -color);
+
+        if (g_verbose == 1) {
+            cout << endl;
+            for ( int i = 0; i < itr.depth()+1; ++i) {
+                std::cout << "\t";
+            }
+            cout << "Leaving " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": ret = " << eval.first << " a = " << a << " b = " << b << endl;
+        }
+
+        if (-eval.first > a) {
+            move = (*child).move;
+            a = -eval.first;
+        }
+        if (a >= b) {
+            break;
+        }
     }
+
+    if (g_verbose == 1) {
+        cout << endl;
+        for ( int i = 0; i < itr.depth(); ++i) {
+            std::cout << "\t";
+        }
+        cout << " d: " << d << " a: " << a << " b: " << b << " move: " << (char)((*itr).move%SIZE + 97) << (*itr).move/SIZE + 1 ;
+    }
+
+    return make_pair(a, move);
+}
+
+pair<int, int> timesearch( GameTree<State>::iterator itr, Othello board, int color) {
+    clock_t temp = clock() - init;
+    int d = 1;
+    pair<int, int> optimal;
+    double curtime = (double)temp / ((double)CLOCKS_PER_SEC);
+    while (curtime < g_timeout) {
+        cout <<"Time remaining. Increasing depth to " << d + 1 << endl;
+        pair<int, int> tempmove = gensearch( itr, board, d++, -1000, 1000, color);
+        temp = clock() - init;
+        curtime = (double)temp / ((double)CLOCKS_PER_SEC);
+        if (curtime < g_timeout) {
+            optimal = tempmove;
+        }
+    }
+    return optimal;
 }
 
 int ai_initialize( Othello board, bool color ) {
     init=clock();
-    GameTree<State> tree ( State( board, color, 0 ) );
-    GameTree<State>::iterator itr = tree.begin();
     tree_count = 1;
     search_count = 0;
-    int depth = g_searchdepth == 0 ? searchdepth[g_turn++] : g_searchdepth;
-    cout << "Depth: " << depth << endl;
-    treegen( itr, depth, board );
 
-    if (g_verbose == 2)
-        print( itr, depth);
+    GameTree<State> tree ( State( board, color, 0 ) );
+    GameTree<State>::iterator itr = tree.begin();
+
+    int depth = g_searchdepth == 0 ? searchdepth[g_turn++] : g_searchdepth;
 
     pair<int, int> optimal;
-    optimal = find_best( itr, depth, -10000, 10000, color ? -1 : 1);
+    if (g_timemode == 0) {
+        cout << "Depth: " << depth << endl;
+        optimal = gensearch( itr, board, depth, -1000, 1000, color ? -1 : 1);
+    } else {
+        optimal = timesearch( itr, board, color ? -1 : 1);
+    }
 
     final=clock()-init;
     double totalTime = (double)final / ((double)CLOCKS_PER_SEC);
+
     cout << endl << "Examined " << search_count << "/" << tree_count << " game states in " << totalTime << " s" << ((totalTime > g_timeout) ? " (timed out)." : ".") << endl;
+
     return optimal.second;
 }
 
