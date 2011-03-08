@@ -104,7 +104,7 @@ Score: 6-3
 Valid moves: d2  e2  b3  c3  f3  
 Depth: 2
 
-Examined 33/38 game states in 0 s.
+Examined 33/38 game states in 0.016 s.
 
 Opponent moves: c3
 
@@ -137,7 +137,7 @@ Score: 7-4
 Valid moves: a2  b2  d2  e2  f2  f3  b4  f4  
 Depth: 2
 
-Examined 51/66 game states in 0.015 s.
+Examined 44/66 game states in 0 s.
 
 Opponent moves: f4
 
@@ -170,7 +170,7 @@ Score: 10-3
 Valid moves: a2  b2  d2  e2  f3  g3  
 Depth: 2
 
-Examined 39/51 game states in 0 s.
+Examined 31/51 game states in 0 s.
 
 Opponent moves: f3
 
@@ -203,7 +203,7 @@ Score: 11-4
 Valid moves: b1  e1  a2  b2  d2  g2  g3  b4  h4  
 Depth: 2
 
-Examined 48/81 game states in 0 s.
+Examined 42/81 game states in 0 s.
 
 Opponent moves: h4
 
@@ -302,7 +302,7 @@ Score: 13-8
 Valid moves: a2  b2  d2  g2  g3  a4  b4  b5  g5  e6  
 Depth: 2
 
-Examined 64/109 game states in 0 s.
+Examined 63/109 game states in 0.016 s.
 
 Opponent moves: e6
 
@@ -335,7 +335,7 @@ Score: 14-9
 Valid moves: b1  a2  b2  d2  g2  g3  h3  a4  b4  b5  h6  
 Depth: 2
 
-Examined 75/122 game states in 0 s.
+Examined 69/122 game states in 0 s.
 
 Opponent moves: h6
 
@@ -368,7 +368,7 @@ Score: 15-10
 Valid moves: b1  a2  b2  g3  h3  a4  b4  b5  c5  
 Depth: 2
 
-Examined 48/90 game states in 0 s.
+Examined 45/90 game states in 0.016 s.
 
 Opponent moves: h3
 
@@ -403,622 +403,614 @@ Depth: 2
 
 Examined 47/78 game states in 0 s.
 
-Opponent moves: g3
+Opponent moves: b4
 
   a b c d e f g h
-1 . . . O O O * .
-2 . . @ . @ O * *
-3 . @ @ @ @ @ O O
-4 . . @ @ @ @ O O
-5 . . . @ @ @ @ O
+1 . . . O O O . .
+2 . . @ . @ @ . .
+3 . @ @ @ @ @ * O
+4 . O O O O O O O
+5 * * * @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 16-12
+Score: 13-15
 
-Valid moves: g1  g2  h2  d7  e7  f7  g7  
+Valid moves: g3  a5  b5  c5  d7  e7  f7  g7  
 
-Player moves: g1
-
-  a b c d e f g h
-1 . . . O O O @ *
-2 * * @ * @ @ . .
-3 * @ @ @ @ @ O O
-4 * * @ @ @ @ O O
-5 . * * @ @ @ @ O
-6 . . @ * O O * O
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 18-11
-
-Valid moves: h1  a2  b2  d2  a3  a4  b4  b5  c5  d6  g6  
-Depth: 2
-
-Examined 28/111 game states in 0 s.
-
-Opponent moves: h1
+Player moves: g3
 
   a b c d e f g h
-1 . . . O O O O O
-2 . . @ . @ @ * *
-3 . @ @ @ @ @ O O
-4 . . @ @ @ @ O O
-5 . . . @ @ @ @ O
-6 . . @ . O O . O
-7 . . . * * * * .
-8 . . . . . . . .
-Score: 17-13
-
-Valid moves: g2  h2  d7  e7  f7  g7  
-
-Player moves: g2
-
-  a b c d e f g h
-1 . . . O O O O O
-2 * * @ * @ @ @ .
+1 . * * O O O * .
+2 * * @ * @ @ * .
 3 * @ @ @ @ @ @ O
-4 * * @ @ @ @ @ O
-5 . * * @ @ @ @ O
-6 . . @ . O O * O
+4 * O O O O @ @ O
+5 . . * @ @ @ @ O
+6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 20-11
+Score: 16-13
 
-Valid moves: a2  b2  d2  a3  a4  b4  b5  c5  g6  b7  
+Valid moves: b1  c1  g1  a2  b2  d2  g2  a3  a4  c5  d6  g6  b7  
 Depth: 2
 
-Examined 46/85 game states in 0 s.
+Examined 58/144 game states in 0.015 s.
 
 Opponent moves: a3
 
   a b c d e f g h
-1 . . . O O O O O
-2 * * @ * @ @ @ *
+1 . . . O O O . .
+2 * * @ * @ @ * *
 3 O O O O O O O O
-4 * . @ @ @ @ @ O
-5 . . . @ @ @ @ O
+4 * O O O O @ @ O
+5 . * * @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 14-18
+Score: 10-20
 
-Valid moves: a2  b2  d2  h2  a4  d7  e7  f7  g7  
+Valid moves: a2  b2  d2  g2  h2  a4  b5  c5  d7  e7  f7  g7  
 
 Player moves: a2
 
   a b c d e f g h
-1 * * * O O O O O
-2 @ . @ . @ @ @ .
+1 * * * O O O * .
+2 @ * @ . @ @ . .
 3 O @ O O O O O O
-4 * * @ @ @ @ @ O
+4 * O @ O O @ @ O
 5 . * * @ @ @ @ O
 6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 16-17
+Score: 13-18
 
-Valid moves: a1  b1  c1  a4  b4  b5  c5  d6  g6  b7  
+Valid moves: a1  b1  c1  g1  b2  a4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 27/104 game states in 0.016 s.
+Examined 33/133 game states in 0 s.
 
 Opponent moves: a1
 
   a b c d e f g h
-1 O . . O O O O O
-2 O * @ * @ @ @ *
+1 O . . O O O . .
+2 O * @ * @ @ * *
 3 O @ O O O O O O
-4 . . @ @ @ @ @ O
-5 . . . @ @ @ @ O
+4 * O @ O O @ @ O
+5 . * * @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 15-19
+Score: 12-20
 
-Valid moves: b2  d2  h2  d7  e7  f7  g7  
+Valid moves: b2  d2  g2  h2  a4  b5  c5  d7  e7  f7  g7  
 
 Player moves: b2
 
   a b c d e f g h
-1 O * * O O O O O
-2 O @ @ * @ @ @ .
+1 O * * O O O * .
+2 O @ @ * @ @ . .
 3 O @ @ O O O O O
-4 * * @ @ @ @ @ O
+4 * O @ @ O @ @ O
 5 . * * @ @ @ @ O
 6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 17-18
+Score: 15-18
 
-Valid moves: b1  c1  d2  a4  b4  b5  c5  d6  g6  b7  
+Valid moves: b1  c1  g1  d2  a4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 33/91 game states in 0 s.
+Examined 48/121 game states in 0.015 s.
 
 Opponent moves: c1
 
   a b c d e f g h
-1 O * O O O O O O
-2 O O @ * @ @ @ *
+1 O * O O O O . .
+2 O O @ * @ @ * *
 3 O @ @ O O O O O
-4 . . @ @ @ @ @ O
-5 . . . @ @ @ @ O
+4 * O @ @ O @ @ O
+5 * * . @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 16-20
+Score: 14-20
 
-Valid moves: b1  d2  h2  d7  e7  f7  g7  
+Valid moves: b1  d2  g2  h2  a4  a5  b5  d7  e7  f7  g7  
 
 Player moves: b1
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ * @ @ @ .
+1 O @ O O O O * .
+2 O @ @ * @ @ . .
 3 O @ @ O O O O O
-4 * * @ @ @ @ @ O
+4 * O @ @ O @ @ O
 5 . * * @ @ @ @ O
 6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 18-19
+Score: 16-19
 
-Valid moves: d2  a4  b4  b5  c5  d6  g6  b7  
+Valid moves: g1  d2  a4  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 27/73 game states in 0 s.
+Examined 44/101 game states in 0 s.
 
 Opponent moves: a4
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O * @ @ @ *
+1 O @ O O O O * .
+2 O @ O * @ @ * *
 3 O O @ O O O O O
-4 O * @ @ @ @ @ O
-5 . . . @ @ @ @ O
+4 O O @ @ O @ @ O
+5 * * . @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 16-22
+Score: 14-22
 
-Valid moves: d2  h2  b4  d7  e7  f7  g7  
+Valid moves: g1  d2  g2  h2  a5  b5  d7  e7  f7  g7  
 
-Player moves: d2
+Player moves: g1
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ @ @ @ @ *
-3 O O @ @ @ O O O
-4 O * @ @ @ @ @ O
+1 O @ @ @ @ @ @ *
+2 O @ O * @ @ . .
+3 O O @ O O O O O
+4 O O @ @ O @ @ O
 5 . * * @ @ @ @ O
 6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 20-19
+Score: 19-18
 
-Valid moves: h2  b4  b5  c5  d6  g6  b7  
+Valid moves: h1  d2  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 20/59 game states in 0 s.
+Examined 23/77 game states in 0 s.
 
-Opponent moves: h2
+Opponent moves: h1
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O O O O O O O O
-3 O O @ @ @ O O O
-4 O * @ @ @ @ @ O
-5 . . . @ @ @ @ O
+1 O O O O O O O O
+2 O @ O * @ @ * *
+3 O O @ O O O O O
+4 O O @ @ O @ @ O
+5 * * . @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 14-26
+Score: 13-25
 
-Valid moves: b4  d7  e7  f7  g7  
+Valid moves: d2  g2  h2  a5  b5  d7  e7  f7  g7  
 
-Player moves: b4
+Player moves: d2
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ @ @ @ O O O
-4 O @ @ @ @ @ @ O
-5 * * * @ @ @ @ O
+1 O O O O O O O O
+2 O @ @ @ @ @ * .
+3 O O @ @ @ O O O
+4 O O @ @ O @ @ O
+5 . * * @ @ @ @ O
 6 . . @ * O O * O
 7 . * . . . . . .
 8 . . . . . . . .
-Score: 17-24
+Score: 17-22
 
-Valid moves: a5  b5  c5  d6  g6  b7  
+Valid moves: g2  b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 17/41 game states in 0 s.
+Examined 23/59 game states in 0 s.
 
-Opponent moves: a5
+Opponent moves: g2
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O @ @ O O O
-4 O O @ @ @ @ @ O
-5 O * . @ @ @ @ O
+1 O O O O O O O O
+2 O O O O O O O *
+3 O O @ @ @ O O O
+4 O O @ @ O @ @ O
+5 * . . @ @ @ @ O
 6 . . @ . O O . O
 7 . . . * * * * .
 8 . . . . . . . .
-Score: 15-27
+Score: 12-28
 
-Valid moves: b5  d7  e7  f7  g7  
+Valid moves: h2  a5  d7  e7  f7  g7  
 
-Player moves: b5
+Player moves: h2
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O @ @ O O O
-4 O @ @ @ @ @ @ O
-5 O @ * @ @ @ @ O
-6 * . @ * O O * O
-7 . * . * . . . .
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ @ @ O @ O
+4 O O @ @ O @ @ O
+5 . * * @ @ @ @ O
+6 . . @ * O O * O
+7 . * . . . . . .
 8 . . . . . . . .
-Score: 17-26
+Score: 14-27
 
-Valid moves: c5  a6  d6  g6  b7  d7  
+Valid moves: b5  c5  d6  g6  b7  
 Depth: 2
 
-Examined 24/43 game states in 0 s.
+Examined 41/41 game states in 0.016 s.
+
+Opponent moves: b7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ @ @ O @ O
+4 O O @ @ O @ @ O
+5 * . * O @ @ @ O
+6 . . O * O O . O
+7 . O . * * * * *
+8 . . . . . . . .
+Score: 12-30
+
+Valid moves: a5  c5  d6  d7  e7  f7  g7  h7  
+
+Player moves: a5
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ @ @ O @ O
+4 O @ @ @ O @ @ O
+5 @ * * O @ @ @ O
+6 * . O . O O * O
+7 . O . . . . . .
+8 . . . . . . . .
+Score: 14-29
+
+Valid moves: b5  c5  a6  g6  
+Depth: 2
+
+Examined 32/32 game states in 0 s.
 
 Opponent moves: a6
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ @ @ @ O
-5 O O . @ @ @ @ O
-6 O * @ . O O . O
-7 . . . * * * * .
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ @ @ O @ O
+4 O @ @ @ O @ @ O
+5 O . * O @ @ @ O
+6 O . O * O O . O
+7 . O . * * * * *
 8 . . . . . . . .
-Score: 14-30
+Score: 13-31
 
-Valid moves: b6  d7  e7  f7  g7  
-
-Player moves: b6
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ @ @ @ O
-5 O @ * @ @ @ @ O
-6 O @ @ * O O * O
-7 . * * * . . . .
-8 . . . . . . . .
-Score: 16-29
-
-Valid moves: c5  d6  g6  b7  c7  d7  
-Depth: 2
-
-Examined 25/42 game states in 0 s.
-
-Opponent moves: d6
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O O @ O @ O
-5 O @ * O O @ @ O
-6 O O O O O O . O
-7 . * . * * * * .
-8 . . . . . . . .
-Score: 10-36
-
-Valid moves: c5  b7  d7  e7  f7  g7  
+Valid moves: c5  d6  d7  e7  f7  g7  h7  
 
 Player moves: c5
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ @ O @ O
-5 O @ @ @ @ @ @ O
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ @ @ O @ O
+4 O @ @ @ O @ @ O
+5 O * @ @ @ @ @ O
+6 O * O * O O * O
+7 . O . . . . . .
+8 . . . . . . . .
+Score: 15-30
+
+Valid moves: b5  b6  d6  g6  
+Depth: 2
+
+Examined 35/37 game states in 0 s.
+
+Opponent moves: b5
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O @ O @ O
+4 O O O @ O @ @ O
+5 O O O O O O O O
+6 O * O * O O * O
+7 . O * * * * * *
+8 . . . . . . . .
+Score: 7-39
+
+Valid moves: b6  d6  g6  c7  d7  e7  f7  g7  h7  
+
+Player moves: b6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O @ O @ O
+4 O O O @ O @ @ O
+5 O O @ O O O O O
+6 O @ O * O O . O
+7 * O * . . . . .
+8 . . . . . . . .
+Score: 9-38
+
+Valid moves: d6  a7  c7  
+Depth: 2
+
+Examined 27/28 game states in 0 s.
+
+Opponent moves: a7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O O O
+6 O O O * O O * O
+7 O O * * . * * *
+8 . . . . . . . .
+Score: 5-43
+
+Valid moves: d6  g6  c7  d7  f7  g7  h7  
+
+Player moves: d6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O O O
+6 O O O @ O O . O
+7 O O . * * . . .
+8 . . . . . . . .
+Score: 7-42
+
+Valid moves: d7  e7  
+Depth: 2
+
+Examined 16/17 game states in 0 s.
+
+Opponent moves: d7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O O O
 6 O O O O O O * O
-7 . . . . . . . .
+7 O O * O * * * *
+8 . . * . . . . .
+Score: 6-44
+
+Valid moves: g6  c7  e7  f7  g7  h7  c8  
+
+Player moves: g6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O @ O
+6 O O O O O O @ O
+7 O O . O . * * *
 8 . . . . . . . .
-Score: 14-33
+Score: 8-43
 
-Valid moves: g6  
+Valid moves: f7  g7  h7  
 Depth: 2
 
-Examined 10/10 game states in 0 s.
-
-Opponent moves: g6
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O O O O O O O O
-7 * * * * * * * *
-8 . . . . . . . .
-Score: 10-38
-
-Valid moves: a7  b7  c7  d7  e7  f7  g7  h7  
-
-Player moves: a7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O @ O O O O O O
-7 @ . * . . . . .
-8 * . . . . . . .
-Score: 12-37
-
-Valid moves: c7  a8  
-Depth: 2
-
-Examined 18/18 game states in 0 s.
-
-Opponent moves: a8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O @ O O O O O O
-7 O * * * * * * *
-8 O . . . . . . .
-Score: 11-39
-
-Valid moves: b7  c7  d7  e7  f7  g7  h7  
-
-Player moves: b7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O @ @ O O O O O
-7 O @ * * . . . .
-8 O . * . . . . .
-Score: 13-38
-
-Valid moves: c7  d7  c8  
-Depth: 2
-
-Examined 23/23 game states in 0 s.
-
-Opponent moves: c8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O @ @ O O O O O
-7 O O * * * * * *
-8 O * O . . . . .
-Score: 12-40
-
-Valid moves: c7  d7  e7  f7  g7  h7  b8  
-
-Player moves: c7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O @ @ @ O O O O
-7 O O @ * * . . .
-8 O * O * . . . .
-Score: 14-39
-
-Valid moves: d7  e7  b8  d8  
-Depth: 2
-
-Examined 28/28 game states in 0 s.
-
-Opponent moves: d8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O O @ @ O O O O
-7 O O O . * * * *
-8 O * O O . . . .
-Score: 12-42
-
-Valid moves: e7  f7  g7  h7  b8  
-
-Player moves: e7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ O O O
-6 O O @ @ @ O O O
-7 O O O * @ * . .
-8 O . O O * * . .
-Score: 14-41
-
-Valid moves: d7  f7  e8  f8  
-Depth: 2
-
-Examined 22/23 game states in 0 s.
-
-Opponent moves: f8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O O O @ O O O O
-5 O @ O @ @ O O O
-6 O O @ O @ O O O
-7 O O O * O . * *
-8 O * O O * O . .
-Score: 10-46
-
-Valid moves: d7  g7  h7  b8  e8  
-
-Player moves: d7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O O O @ O O O O
-5 O @ O @ @ O O O
-6 O O @ @ @ O O O
-7 O O O @ O * . .
-8 O . O O * O . .
-Score: 12-45
-
-Valid moves: f7  e8  
-Depth: 2
-
-Examined 11/11 game states in 0 s.
-
-Opponent moves: e8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O O O @ O O O O
-5 O O O @ @ O O O
-6 O O O @ @ O O O
-7 O O O O O . * *
-8 O * O O O O . .
-Score: 9-49
-
-Valid moves: g7  h7  b8  
-
-Player moves: g7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O O O @ O O O O
-5 O O O @ @ O O O
-6 O O O @ @ @ O O
-7 O O O O O * @ .
-8 O . O O O O * *
-Score: 11-48
-
-Valid moves: f7  g8  h8  
-Depth: 2
-
-Examined 10/12 game states in 0 s.
-
-Opponent moves: h8
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ O O O O O O
-3 O @ O O @ O O O
-4 O O O O O O O O
-5 O O O @ O O O O
-6 O O O @ @ O O O
-7 O O O O O . O *
-8 O * O O O O . O
-Score: 7-53
-
-Valid moves: h7  b8  
-
-Player moves: h7
-
-  a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ O O O O O
-3 O @ O @ @ O O O
-4 O O O O @ O O O
-5 O O O @ O @ O O
-6 O O O @ @ O @ O
-7 O O O O O * O @
-8 O . O O O O . O
-Score: 13-48
-
-Valid moves: f7  
-Depth: 2
-
-Examined 4/4 game states in 0 s.
+Examined 20/21 game states in 0 s.
 
 Opponent moves: f7
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ O O O O O
-3 O @ O @ @ O O O
-4 O O O O @ O O O
-5 O O O O O @ O O
-6 O O O @ O O O O
-7 O O O O O O O @
-8 O * O O O O * O
-Score: 10-52
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O @ O
+6 O O O O O O O O
+7 O O * O * O * *
+8 . . * . . * . .
+Score: 7-45
 
-Valid moves: b8  g8  
+Valid moves: c7  e7  g7  h7  c8  f8  
+
+Player moves: c7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O @ O O O @ O
+4 O O @ O O @ @ O
+5 O O @ O @ O @ O
+6 O O @ @ O O O O
+7 O O @ O * O . .
+8 . . * * . . . .
+Score: 12-41
+
+Valid moves: e7  c8  d8  
+Depth: 2
+
+Examined 21/27 game states in 0 s.
+
+Opponent moves: c8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O @ O
+6 O O O @ O O O O
+7 O O O O * O * *
+8 . * O * . * . .
+Score: 7-47
+
+Valid moves: e7  g7  h7  b8  d8  f8  
+
+Player moves: e7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O @ O @ O
+6 O O O @ @ @ O O
+7 O O O O @ O * .
+8 . . O * * * . .
+Score: 10-45
+
+Valid moves: g7  d8  e8  f8  
+Depth: 2
+
+Examined 16/27 game states in 0 s.
+
+Opponent moves: g7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ @ O O O
+7 O O O O @ O O *
+8 . * O * . * * .
+Score: 8-48
+
+Valid moves: h7  b8  d8  f8  g8  
+
+Player moves: h7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O @
+3 O O O O O O @ @
+4 O O O O O @ @ @
+5 O O O O O O @ @
+6 O O O @ @ O O @
+7 O O O O @ @ @ @
+8 . . O * * * * *
+Score: 15-42
+
+Valid moves: d8  e8  f8  g8  h8  
+Depth: 2
+
+Examined 19/23 game states in 0 s.
+
+Opponent moves: h8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ @ O O O
+7 O O O O @ @ O O
+8 . * O * . . * O
+Score: 8-50
+
+Valid moves: b8  d8  g8  
 
 Player moves: b8
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ O O O O O
-3 O @ O @ @ O O O
-4 O @ O O @ O O O
-5 O @ O O O @ O O
-6 O @ O @ O O O O
-7 O @ @ O O O O @
-8 O @ O O O O . O
-Score: 16-47
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ @ O O O
+7 O O @ O @ @ O O
+8 * @ O * * * * O
+Score: 10-49
+
+Valid moves: a8  d8  e8  f8  g8  
+Depth: 2
+
+Examined 12/19 game states in 0 s.
+
+Opponent moves: a8
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ O O O O O
-3 O @ O @ @ O O O
-4 O @ O O @ O O O
-5 O @ O O O @ O O
-6 O @ O @ O O O O
-7 O @ @ O O O O @
-8 O @ O O O O * O
-Score: 16-47
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ @ O O O
+7 O O @ O @ @ O O
+8 O O O * . . * O
+Score: 9-51
+
+Valid moves: d8  g8  
+
+Player moves: d8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ @ O O O
+7 O O @ @ @ @ O O
+8 O O O @ * * * O
+Score: 11-50
+
+Valid moves: e8  f8  g8  
+Depth: 2
+
+Examined 8/9 game states in 0 s.
+
+Opponent moves: e8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O O @ O
+6 O O O @ O O O O
+7 O O @ O O O O O
+8 O O O O O * * O
+Score: 6-56
+
+Valid moves: f8  g8  
+
+Player moves: f8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O @ @ O
+6 O O O @ O @ O O
+7 O O @ O @ @ O O
+8 O O O O O @ * O
+Score: 11-52
 
 Valid moves: g8  
+Depth: 2
 
-Player moves: g8
+Examined 3/3 game states in 0 s.
+
+Opponent moves: g8
 
   a b c d e f g h
-1 O @ O O O O O O
-2 O @ @ O O O O O
-3 O @ O @ @ O O O
-4 O @ @ O @ O O O
-5 O @ O @ O @ O O
-6 O @ O @ @ O O O
-7 O @ @ O O @ O @
-8 O @ @ @ @ @ @ O
-Score: 25-39
+1 O O O O O O O O
+2 O O O O O O O O
+3 O O O O O O @ O
+4 O O O O O @ @ O
+5 O O O O O @ @ O
+6 O O O @ O @ O O
+7 O O @ O @ O O O
+8 O O O O O O O O
+Score: 9-55
 
-Score: 25-39
+Score: 9-55
 Game over.
 
-Game took 1.25 s.
+Game took 1.171 s.

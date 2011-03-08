@@ -44,7 +44,7 @@ Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 
-Examined 81307/166547 game states in 5.015 s.
+Examined 118441/263555 game states in 5.016 s.
 
 Opponent moves: f3
 
@@ -83,7 +83,7 @@ Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 
-Examined 69973/168263 game states in 5.015 s.
+Examined 106611/261516 game states in 5.016 s.
 
 Opponent moves: d3
 
@@ -121,7 +121,7 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 72770/167365 game states in 5.016 s.
+Examined 94707/251446 game states in 5.016 s.
 
 Opponent moves: d2
 
@@ -159,7 +159,7 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 76638/167110 game states in 5.015 s.
+Examined 105641/254553 game states in 5.016 s.
 
 Opponent moves: h3
 
@@ -197,37 +197,37 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 70460/170074 game states in 5.016 s.
+Examined 94718/264829 game states in 5.016 s.
 
-Opponent moves: f4
+Opponent moves: f6
 
   a b c d e f g h
 1 . . @ . . . . .
-2 . . . @ @ . . *
+2 . . * @ @ . * .
 3 . . @ O @ O O O
-4 . . * O O O * .
-5 . . * O @ . * .
-6 . . . * . . . .
-7 . . . . . . . .
+4 . . * O @ . * .
+5 . . * O O . . .
+6 . . * * * O . .
+7 . . . . . . * .
 8 . . . . . . . .
 Score: 6-8
 
-Valid moves: h2  c4  g4  c5  g5  d6  
+Valid moves: c2  g2  c4  g4  c5  c6  d6  e6  g7  
 
-Player moves: h2
+Player moves: c2
 
   a b c d e f g h
-1 . . @ * * * . *
-2 . * . @ @ * . @
-3 . * @ O @ O @ O
-4 . . . O O @ * .
-5 . . . O @ * . .
-6 . . . . * * . .
+1 . . @ * * . . .
+2 . * @ @ @ * . .
+3 . * @ @ @ O O O
+4 . . . O @ * . .
+5 . . . O O . . .
+6 . . . . . O . .
 7 . . . . . . . .
 8 . . . . . . . .
-Score: 9-6
+Score: 8-7
 
-Valid moves: d1  e1  f1  h1  b2  f2  b3  g4  f5  e6  f6  
+Valid moves: d1  e1  b2  f2  b3  f4  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -235,37 +235,227 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 76055/169877 game states in 5.016 s.
+Examined 101283/260870 game states in 5.016 s.
+
+Opponent moves: e1
+
+  a b c d e f g h
+1 . . @ . O * . .
+2 . . @ @ O * . .
+3 . . @ @ O O O O
+4 . . . O O * . .
+5 . . . O O * . .
+6 . . . * . O . .
+7 . . . . . . * .
+8 . . . . . . . .
+Score: 5-11
+
+Valid moves: f1  f2  f4  f5  d6  g7  
+
+Player moves: f1
+
+  a b c d e f g h
+1 . * @ * O @ * .
+2 . * @ @ @ . . .
+3 . * @ @ O O O O
+4 . * . O O . . .
+5 . . . O O . . .
+6 . . . . . O . .
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 7-10
+
+Valid moves: b1  d1  g1  b2  b3  b4  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 102192/262098 game states in 5.015 s.
+
+Opponent moves: g1
+
+  a b c d e f g h
+1 . . @ . O O O .
+2 . . @ @ @ . . .
+3 . . @ @ O O O O
+4 . . . O O * * .
+5 . . . O O * . .
+6 . . . * * O . .
+7 . . . . . . * .
+8 . . . . . . . .
+Score: 6-12
+
+Valid moves: f4  g4  f5  d6  e6  g7  
+
+Player moves: f4
+
+  a b c d e f g h
+1 . * @ * O O O .
+2 . * @ @ @ * . .
+3 . * @ @ @ O O O
+4 . * * O O @ * .
+5 . . . O O * . .
+6 . . . . . O . .
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 8-11
+
+Valid moves: b1  d1  b2  f2  b3  b4  c4  g4  f5  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 108306/258679 game states in 5.015 s.
+
+Opponent moves: f5
+
+  a b c d e f g h
+1 . . @ . O O O .
+2 . . @ @ @ . . .
+3 . . @ @ @ O O O
+4 . . . O O O * .
+5 . . * O O O * .
+6 . . . * * O * .
+7 . . . . . . * .
+8 . . . . . . . .
+Score: 7-13
+
+Valid moves: g4  c5  g5  d6  e6  g6  g7  
+
+Player moves: g4
+
+  a b c d e f g h
+1 . * @ * O O O .
+2 . * @ @ @ * * .
+3 . * @ @ @ @ O O
+4 . * * O O O @ *
+5 . . . O O O * .
+6 . . . . . O . .
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 9-12
+
+Valid moves: b1  d1  b2  f2  g2  b3  b4  c4  h4  g5  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 107271/260594 game states in 5.015 s.
+
+Opponent moves: h4
+
+  a b c d e f g h
+1 . . @ . O O O .
+2 . . @ @ @ . . .
+3 . . @ @ @ @ O O
+4 . . . O O O O O
+5 . . * O O O * *
+6 . . * * * O * .
+7 . . . . . * * .
+8 . . . . . . . .
+Score: 8-14
+
+Valid moves: c5  g5  h5  c6  d6  e6  g6  f7  g7  
+
+Player moves: c5
+
+  a b c d e f g h
+1 . * @ * O O O .
+2 . * @ @ @ * * .
+3 . * @ @ @ @ O O
+4 . * * @ O O O O
+5 . * @ O O O . .
+6 . . . . . O . .
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 10-13
+
+Valid moves: b1  d1  b2  f2  g2  b3  b4  c4  b5  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 108204/266847 game states in 5.015 s.
+
+Opponent moves: f2
+
+  a b c d e f g h
+1 . . @ . O O O .
+2 . . @ @ @ O * .
+3 . . @ @ @ O O O
+4 . . . @ O O O O
+5 . . @ O O O * *
+6 . . . * * O * .
+7 . . . . . . * .
+8 . . . . . . . .
+Score: 9-15
+
+Valid moves: g2  g5  h5  d6  e6  g6  g7  
+
+Player moves: g2
+
+  a b c d e f g h
+1 . * @ * O O O *
+2 . * @ @ @ @ @ .
+3 . * @ @ @ O O O
+4 . * * @ O O O O
+5 . * @ O O O . .
+6 . * . . . O . .
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 11-14
+
+Valid moves: b1  d1  h1  b2  b3  b4  c4  b5  b6  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 92838/275558 game states in 5.016 s.
 
 Opponent moves: h1
 
   a b c d e f g h
-1 . . @ . . . . O
-2 . . . @ @ * . O
-3 . . @ O @ O @ O
-4 . . * O O @ * .
-5 . . * O @ . . .
-6 . . . * . . . .
-7 . . . . . . . .
+1 . . @ . O O O O
+2 . . @ @ @ @ O *
+3 . . @ @ @ O O O
+4 . . . @ O O O O
+5 . . @ O O O * *
+6 . . . * * O * .
+7 . . . . . * * .
 8 . . . . . . . .
-Score: 8-8
+Score: 10-16
 
-Valid moves: f2  c4  g4  c5  d6  
+Valid moves: h2  g5  h5  d6  e6  g6  f7  g7  
 
-Player moves: f2
+Player moves: h2
 
   a b c d e f g h
-1 . . @ * * * * O
-2 . * . @ @ @ * O
-3 . * @ O @ @ @ O
-4 . . . O O @ * .
-5 . . . O @ * . .
-6 . . . * * * . .
+1 . * @ * O O O O
+2 . * @ @ @ @ @ @
+3 . * @ @ @ O O O
+4 . * * @ O O O O
+5 . * @ O O O . .
+6 . * . . . O . .
 7 . . . . . . . .
 8 . . . . . . . .
-Score: 10-7
+Score: 12-15
 
-Valid moves: d1  e1  f1  g1  b2  g2  b3  g4  f5  d6  e6  f6  
+Valid moves: b1  d1  b2  b3  b4  c4  b5  b6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -273,37 +463,37 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 60127/176457 game states in 5.016 s.
+Examined 122516/280523 game states in 5.015 s.
 
 Opponent moves: d1
 
   a b c d e f g h
-1 . . @ O * . . O
-2 . . * O @ @ . O
-3 . . @ O @ @ @ O
-4 . . * O O @ . .
-5 . . * O @ . . .
-6 . . * . . . . .
-7 . . . . . . . .
+1 . . @ O O O O O
+2 . . @ O O @ @ @
+3 . . @ O @ O O O
+4 . . . O O O O O
+5 . . @ O O O * *
+6 . . * * * O * .
+7 . . . . . * * .
 8 . . . . . . . .
-Score: 9-9
+Score: 8-20
 
-Valid moves: e1  c2  c4  c5  c6  
+Valid moves: g5  h5  c6  d6  e6  g6  f7  g7  
 
-Player moves: e1
+Player moves: g5
 
   a b c d e f g h
-1 . . @ @ @ * * O
-2 . * . @ @ @ * O
-3 . * @ O @ @ @ O
-4 . . . O O @ * .
-5 . . . O @ * . .
-6 . . . * * * . .
+1 . * @ O O O O O
+2 . * @ O O @ @ @
+3 . * @ O @ O @ O
+4 . * . O O @ @ O
+5 . . @ @ @ @ @ *
+6 . * * * * O * *
 7 . . . . . . . .
 8 . . . . . . . .
-Score: 12-7
+Score: 15-14
 
-Valid moves: f1  g1  b2  g2  b3  g4  f5  d6  e6  f6  
+Valid moves: b1  b2  b3  b4  h5  b6  c6  d6  e6  g6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -311,455 +501,113 @@ Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 
-Examined 51615/183555 game states in 5.016 s.
-
-Opponent moves: f1
-
-  a b c d e f g h
-1 . . @ @ @ O * O
-2 . . . @ O @ . O
-3 . . @ O @ @ @ O
-4 . . * O O @ . .
-5 . . * O @ . . .
-6 . . * * . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 11-9
-
-Valid moves: g1  c4  c5  c6  d6  
-
-Player moves: g1
-
-  a b c d e f g h
-1 . * @ @ @ @ @ O
-2 . * * @ O @ * O
-3 . * @ O @ @ @ O
-4 . . . O O @ * .
-5 . . . O @ * . .
-6 . . . * * * . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 13-8
-
-Valid moves: b1  b2  c2  g2  b3  g4  f5  d6  e6  f6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 64326/185717 game states in 5.015 s.
+Examined 140079/285125 game states in 5.016 s.
 
 Opponent moves: b1
 
   a b c d e f g h
 1 . O O O O O O O
-2 . . . @ O @ . O
-3 . . @ O @ @ @ O
-4 . . * O O @ . .
-5 . . * O @ . . .
-6 . . * * . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 8-14
-
-Valid moves: c4  c5  c6  d6  
-
-Player moves: c4
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . * @ O @ * O
-3 . * @ O @ @ @ O
-4 . * @ @ @ @ * *
-5 . * * O @ * * .
-6 . . . * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 11-12
-
-Valid moves: c2  g2  b3  b4  g4  h4  b5  c5  f5  g5  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 82554/186744 game states in 5.016 s.
-
-Opponent moves: g2
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . . @ O O O O
+2 . * O O O @ @ @
 3 . . @ O @ O @ O
-4 . . @ @ O @ . .
-5 . . * O @ . . .
-6 . . . * * . . .
-7 . . . . . . . .
+4 . . * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . . . . . O . .
+7 . . . . * * * .
 8 . . . . . . . .
-Score: 8-16
+Score: 13-17
 
-Valid moves: c5  d6  e6  
-
-Player moves: c5
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . * @ O O O O
-3 . * @ O @ O @ O
-4 . * @ @ O @ * *
-5 . * @ @ @ * * .
-6 . * * * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 10-15
-
-Valid moves: c2  b3  b4  g4  h4  b5  f5  g5  b6  c6  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 86525/191286 game states in 5.015 s.
-
-Opponent moves: g4
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . . @ O O O O
-3 . . @ O @ O O O
-4 . . @ @ O O O *
-5 . . @ @ @ . * .
-6 . . . . . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 8-18
-
-Valid moves: h4  g5  
-
-Player moves: h4
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . * @ O O O O
-3 . * @ O @ O O O
-4 . * @ @ @ @ @ @
-5 . * @ @ @ * * *
-6 . * * * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 12-15
-
-Valid moves: c2  b3  b4  b5  f5  g5  h5  b6  c6  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 84815/196547 game states in 5.016 s.
-
-Opponent moves: h5
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . . * @ O O O O
-3 . . @ O @ O O O
-4 . . @ @ @ @ O O
-5 . . @ @ @ . . O
-6 . . . . . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 10-18
-
-Valid moves: c2  
-
-Player moves: c2
-
-  a b c d e f g h
-1 . O O O O O O O
-2 . * @ @ O O O O
-3 . * @ @ @ O O O
-4 . * @ @ @ @ O O
-5 . * @ @ @ * * O
-6 . * * * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 12-17
-
-Valid moves: b2  b3  b4  b5  f5  g5  b6  c6  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 87130/200671 game states in 5.016 s.
-
-Opponent moves: b3
-
-  a b c d e f g h
-1 . O O O O O O O
-2 * * O @ O O O O
-3 . O O O O O O O
-4 . * @ @ @ @ O O
-5 . . @ @ @ . . O
-6 . . . . . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 8-22
-
-Valid moves: a2  b2  b4  
-
-Player moves: a2
-
-  a b c d e f g h
-1 . O O O O O O O
-2 @ . O @ O O O O
-3 * @ O O O O O O
-4 * * @ @ @ @ O O
-5 . * @ @ @ * * O
-6 . * * * * * . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 10-21
-
-Valid moves: a3  a4  b4  b5  f5  g5  b6  c6  d6  e6  f6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 79607/206737 game states in 5.015 s.
-
-Opponent moves: a4
-
-  a b c d e f g h
-1 . O O O O O O O
-2 @ * O @ O O O O
-3 . O O O O O O O
-4 O * @ @ @ @ O O
-5 . . @ @ @ . . O
-6 . . . . . . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 9-23
-
-Valid moves: b2  b4  
+Valid moves: b2  c4  h5  e7  f7  g7  
 
 Player moves: b2
 
   a b c d e f g h
-1 . O O O O O O O
-2 @ @ @ @ O O O O
-3 * O @ O O O O O
-4 O * @ @ @ @ O O
-5 . * @ @ @ * * O
-6 . * * * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 12-21
-
-Valid moves: a3  b4  b5  f5  g5  b6  c6  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-
-Examined 84326/212468 game states in 5.016 s.
-
-Opponent moves: c6
-
-  a b c d e f g h
-1 . O O O O O O O
-2 @ @ O @ O O O O
-3 . O O O O O O O
-4 O * O @ O @ O O
-5 . * O O @ . . O
-6 . * O * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 6-28
-
-Valid moves: b4  b5  b6  d6  e6  
-
-Player moves: b4
-
-  a b c d e f g h
-1 . O O O O O O O
-2 @ @ O @ O O O O
-3 * @ @ O O O O O
-4 O @ @ @ O @ O O
-5 * * O O @ * * O
-6 . . O * * . . .
-7 . . . . . . . .
-8 . . . . . . . .
-Score: 10-25
-
-Valid moves: a3  a5  b5  f5  g5  d6  e6  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-
-Examined 79891/219436 game states in 5.016 s.
-
-Opponent moves: a5
-
-  a b c d e f g h
-1 . O O O O O O O
-2 @ @ O O O O O O
-3 . @ O O O O O O
-4 O O @ @ O @ O O
-5 O * O O @ . . O
-6 . * O * * . . .
-7 . . * . . . . .
-8 . . . . . . . .
-Score: 7-29
-
-Valid moves: b5  b6  d6  e6  c7  
-
-Player moves: b5
-
-  a b c d e f g h
 1 * O O O O O O O
-2 @ @ O O O O O O
-3 * @ O O O O O O
-4 O @ @ @ O @ O O
-5 O @ @ @ @ * * O
-6 * * O * * * . .
+2 . @ @ @ @ @ @ @
+3 * * @ O @ O @ O
+4 . * * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . * * * * O * *
 7 . . . . . . . .
 8 . . . . . . . .
-Score: 11-26
+Score: 17-14
 
-Valid moves: a1  a3  f5  g5  a6  b6  d6  e6  f6  
+Valid moves: a1  a3  b3  b4  c4  h5  b6  c6  d6  e6  g6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
 Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
 
-Examined 123389/214638 game states in 5.015 s.
+Examined 134120/290606 game states in 5.015 s.
 
 Opponent moves: a1
 
   a b c d e f g h
 1 O O O O O O O O
-2 @ O O O O O O O
-3 . @ O O O O O O
-4 O @ @ @ O @ O O
-5 O @ @ @ @ . . O
-6 . . O . . . . .
-7 . * * * . . . .
+2 * O @ @ @ @ @ @
+3 . * O O @ O @ O
+4 . * * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . . . . . O . .
+7 . . . . * * * .
 8 . . . . . . . .
-Score: 10-28
+Score: 15-17
 
-Valid moves: b7  c7  d7  
+Valid moves: a2  b3  b4  c4  h5  e7  f7  g7  
 
-Player moves: b7
+Player moves: a2
 
   a b c d e f g h
 1 O O O O O O O O
-2 @ O O O O O O O
-3 * @ O O O O O O
-4 O @ @ @ O @ O O
-5 O @ @ @ @ * * O
-6 * * @ * * * . .
-7 . @ * * . . . .
-8 * . . . . . . .
-Score: 12-27
+2 @ @ @ @ @ @ @ @
+3 * * O O @ O @ O
+4 . . . O O @ @ O
+5 . . @ @ @ @ @ *
+6 . * * * * O * *
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 17-16
 
-Valid moves: a3  f5  g5  a6  b6  d6  e6  f6  c7  d7  a8  
+Valid moves: a3  b3  h5  b6  c6  d6  e6  g6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
 Time remaining. Increasing depth to 5
 Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
 
-Examined 125782/219266 game states in 5.016 s.
+Examined 138763/294396 game states in 5.016 s.
 
 Opponent moves: a3
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ @ @ O @ O O
-5 O @ @ @ @ . . O
-6 . . @ . . . . .
-7 . @ . . . . . .
+2 O O @ @ @ @ @ @
+3 O * O O @ O @ O
+4 . * * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . . . . . O . .
+7 . . . . * * * .
 8 . . . . . . . .
-Score: 10-30
+Score: 15-19
+
+Valid moves: b3  b4  c4  h5  e7  f7  g7  
+
+Player moves: b3
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ @ @ O @ O O
-5 O @ @ @ @ * * O
-6 * * @ * * * . .
-7 . @ * * . . . .
-8 * . . . . . . .
-Score: 10-30
-
-Valid moves: f5  g5  a6  b6  d6  e6  f6  c7  d7  a8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-
-Examined 137661/223370 game states in 5.016 s.
-
-Opponent moves: a6
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O @ O @ O O
-5 O O @ @ @ . . O
-6 O * @ . . . . .
-7 . @ . . . . . .
+2 O O @ @ @ @ @ @
+3 O @ @ @ @ O @ O
+4 * * * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . * * * * O * *
+7 . . . . . . . .
 8 . . . . . . . .
-Score: 8-33
+Score: 18-17
 
-Valid moves: b6  
-
-Player moves: b6
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O @ O @ O O
-5 O @ @ @ @ * * O
-6 O @ @ * * * . .
-7 * @ * * . . . .
-8 * * * . . . . .
-Score: 10-32
-
-Valid moves: f5  g5  d6  e6  f6  a7  c7  d7  a8  b8  c8  
+Valid moves: a4  b4  c4  h5  b6  c6  d6  e6  g6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -768,72 +616,37 @@ Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 
-Examined 141921/232887 game states in 5.016 s.
+Examined 130022/300250 game states in 5.016 s.
 
-Opponent moves: g5
+Opponent moves: a4
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ . O O
-6 O @ @ . . . . .
-7 . @ . . . . . .
+2 O O O @ @ @ @ @
+3 O O @ @ @ O @ O
+4 O . * O O @ @ O
+5 . . @ @ @ @ @ *
+6 . . . . . O . .
+7 . . . . * * * .
 8 . . . . . . . .
-Score: 9-34
+Score: 16-20
+
+Valid moves: c4  h5  e7  f7  g7  
+
+Player moves: c4
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O @ O O O O
-5 O @ @ @ @ * O O
-6 O @ @ * * * . .
-7 * @ * * . . . .
-8 * * * . . . . .
-Score: 9-34
-
-Valid moves: f5  d6  e6  f6  a7  c7  d7  a8  b8  c8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-
-Examined 162180/234195 game states in 5.016 s.
-
-Opponent moves: f6
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O O O O O O
-5 O @ @ @ O * O O
-6 O @ @ . . O . .
-7 . @ . . . . . .
+2 O O O @ @ @ @ @
+3 O O @ @ @ O @ O
+4 O * @ @ @ @ @ O
+5 . * @ @ @ @ @ *
+6 . * * * * O * *
+7 . . . . . . . .
 8 . . . . . . . .
-Score: 7-37
+Score: 19-18
 
-Valid moves: f5  
-
-Player moves: f5
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O @ O O O O O O
-5 O @ @ @ @ @ O O
-6 O @ @ * * O * .
-7 * @ * * . . . .
-8 * * * . . . . .
-Score: 9-36
-
-Valid moves: d6  e6  g6  a7  c7  d7  a8  b8  c8  
+Valid moves: b4  b5  h5  b6  c6  d6  e6  g6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -842,37 +655,37 @@ Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 
-Examined 177966/234334 game states in 5.016 s.
+Examined 125970/302473 game states in 5.016 s.
 
-Opponent moves: d6
+Opponent moves: g6
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O @ O O O @ O O
-6 O O O O . O . .
-7 . @ . * . * . .
+2 O O O @ @ @ O @
+3 O O @ O @ O O O
+4 O . @ @ O @ O O
+5 . . @ @ @ O O *
+6 . . . . . O O *
+7 . . . . . * * .
 8 . . . . . . . .
-Score: 3-43
+Score: 12-26
 
-Valid moves: d7  f7  
+Valid moves: h5  h6  f7  g7  
 
-Player moves: d7
+Player moves: h5
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O @ O O O @ O O
-6 O O @ O * O * .
-7 . @ * @ . . . .
-8 * * * * * . . .
-Score: 5-42
+2 O O O @ @ @ O @
+3 O O @ O @ @ O @
+4 O * @ @ O @ @ @
+5 . * @ @ @ @ @ @
+6 . * * * * O O *
+7 . . . . . . . .
+8 . . . . . . . .
+Score: 19-20
 
-Valid moves: e6  g6  c7  a8  b8  c8  d8  e8  
+Valid moves: b4  b5  b6  c6  d6  e6  h6  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -881,157 +694,192 @@ Time remaining. Increasing depth to 6
 Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 
-Examined 223037/250775 game states in 5.015 s.
-
-Opponent moves: e8
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O . O . .
-7 . @ . O . * . .
-8 . . . . O . . .
-Score: 2-46
-
-Valid moves: f7  
-
-Player moves: f7
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O * @ * .
-7 . @ . O * @ * .
-8 * * * . O * . .
-Score: 4-45
-
-Valid moves: e6  g6  e7  g7  a8  b8  c8  f8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-
-Examined 293593/269254 game states in 5.015 s.
-
-Opponent moves: e7
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O . O . .
-7 . @ * O O @ . .
-8 . . . . O . . .
-Score: 3-47
-
-Valid moves: c7  
-
-Player moves: c7
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O * O * .
-7 . @ @ @ @ @ . .
-8 * * * * O * . .
-Score: 6-45
-
-Valid moves: e6  g6  a8  b8  c8  d8  f8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-
-Examined 329084/290319 game states in 5.016 s.
-
-Opponent moves: f8
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O . O . .
-7 . @ @ @ O O * .
-8 . . . . O O . .
-Score: 4-48
-
-Valid moves: g7  
-
-Player moves: g7
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O * O * *
-7 . @ @ @ @ @ @ .
-8 * * * * O O . *
-Score: 7-46
-
-Valid moves: e6  g6  h6  a8  b8  c8  d8  h8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-
-Examined 365984/317477 game states in 5.015 s.
+Examined 147188/307435 game states in 5.016 s.
 
 Opponent moves: h6
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O . O . O
-7 . @ @ @ @ @ O *
-8 . . . . O O . .
-Score: 6-48
+2 O O O O @ @ O O
+3 O O @ O O @ O O
+4 O . @ @ O O @ O
+5 . . @ @ @ @ O O
+6 . . . . . O O O
+7 . . . . . * * *
+8 . . . . . . . .
+Score: 11-29
 
-Valid moves: h7  
+Valid moves: f7  g7  h7  
 
-Player moves: h7
+Player moves: f7
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O * O * O
-7 . @ @ @ @ @ @ @
-8 * * * * O O . *
-Score: 8-47
+2 O O O O @ @ O O
+3 O O @ O O @ O O
+4 O * @ @ O O @ O
+5 . * @ @ @ @ O O
+6 . * * * * @ O O
+7 . . . . * @ * .
+8 . . . . * * . .
+Score: 13-28
 
-Valid moves: e6  g6  a8  b8  c8  d8  h8  
+Valid moves: b4  b5  b6  c6  d6  e6  e7  g7  e8  f8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+
+Examined 134447/311324 game states in 5.016 s.
+
+Opponent moves: e8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O @ O O @ O O
+4 O . @ @ O O @ O
+5 . . @ @ @ @ O O
+6 . . . . . @ O O
+7 . . . . . O * *
+8 . . . . O * . .
+Score: 12-30
+
+Valid moves: g7  h7  f8  
+
+Player moves: g7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O @ O O @ O O
+4 O * @ @ O O @ O
+5 . * @ @ @ @ @ O
+6 . * * * * @ @ O
+7 . . . . * O @ *
+8 . . . . O * * *
+Score: 15-28
+
+Valid moves: b4  b5  b6  c6  d6  e6  e7  h7  f8  g8  h8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+
+Examined 151900/307764 game states in 5.016 s.
+
+Opponent moves: h8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O O @ O O
+4 O . @ O O O @ O
+5 . . @ @ O @ @ O
+6 . . . . * O @ O
+7 . . . . * O O .
+8 . . . . O * * O
+Score: 10-34
+
+Valid moves: e6  e7  f8  g8  
+
+Player moves: e6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O * @ O @ O @ O
+5 . * @ @ @ @ @ O
+6 . * * * @ @ @ O
+7 . . . * * O O *
+8 . . . . O . . O
+Score: 15-30
+
+Valid moves: b4  b5  b6  c6  d6  d7  e7  h7  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+
+Examined 185457/314917 game states in 5.016 s.
+
+Opponent moves: h7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O . @ O O O @ O
+5 . . @ @ @ O @ O
+6 . . . . @ @ O O
+7 . . . . . O O O
+8 . . . . O * * O
+Score: 12-34
+
+Valid moves: f8  g8  
+
+Player moves: f8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O * @ O O O @ O
+5 . * @ @ @ O @ O
+6 . * * * @ @ O O
+7 . . . * * @ O O
+8 . . . . O @ * O
+Score: 14-33
+
+Valid moves: b4  b5  b6  c6  d6  d7  e7  g8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+
+Examined 177069/317304 game states in 5.016 s.
+
+Opponent moves: g8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O * O O O O @ O
+5 . * @ O @ O @ O
+6 . . * * O @ O O
+7 . . . * * O O O
+8 . . . . O O O O
+Score: 9-39
+
+Valid moves: b4  b5  c6  d6  d7  e7  
+
+Player moves: b4
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O @ @ @ @ @ @ O
+5 * * @ O @ O @ O
+6 . * * * O @ O O
+7 . . . . * O O O
+8 . . . . O O O O
+Score: 14-35
+
+Valid moves: a5  b5  b6  c6  d6  e7  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -1041,20 +889,141 @@ Time remaining. Increasing depth to 7
 Time remaining. Increasing depth to 8
 Time remaining. Increasing depth to 9
 
-Examined 456312/372423 game states in 5.015 s.
+Examined 199399/302453 game states in 5.016 s.
 
-Opponent moves: c8
+Opponent moves: e7
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O @ O O
-6 O O O O . O . O
-7 * O O @ @ @ @ @
-8 . . O . O O . .
-Score: 6-50
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O @ @ @ @ @ @ O
+5 . . @ O @ O O O
+6 . . * * O O O O
+7 . . . * O O O O
+8 . . . . O O O O
+Score: 12-38
+
+Valid moves: c6  d6  d7  
+
+Player moves: c6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O @ @ @ @ @ @ O
+5 * * @ @ @ O O O
+6 . * @ * O O O O
+7 . * * . O O O O
+8 . . . . O O O O
+Score: 14-37
+
+Valid moves: a5  b5  b6  d6  b7  c7  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+Time remaining. Increasing depth to 9
+
+Examined 191348/309900 game states in 5.016 s.
+
+Opponent moves: a5
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O O @ @ @ @ @ O
+5 O . @ @ @ O O O
+6 . . @ . O O O O
+7 . . . * O O O O
+8 . . . . O O O O
+Score: 13-39
+
+Valid moves: d7  
+
+Player moves: d7
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ @ O O
+3 O O O O @ @ O O
+4 O O @ @ @ @ @ O
+5 O * @ @ @ @ O O
+6 . * @ * @ O O O
+7 . * * @ O O O O
+8 . . * . O O O O
+Score: 16-37
+
+Valid moves: b5  b6  d6  b7  c7  c8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+Time remaining. Increasing depth to 9
+
+Examined 240344/320803 game states in 5.016 s.
+
+Opponent moves: b6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O @ O @ @ @ O
+5 O * O @ @ @ O O
+6 * O @ . @ O O O
+7 . . . @ O O O O
+8 . . . . O O O O
+Score: 12-42
+
+Valid moves: b5  a6  
+
+Player moves: b5
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O @ O @ @ @ O
+5 O @ @ @ @ @ O O
+6 * O @ * @ O O O
+7 . * * @ O O O O
+8 . . * . O O O O
+Score: 14-41
+
+Valid moves: a6  d6  b7  c7  c8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+Time remaining. Increasing depth to 9
+Time remaining. Increasing depth to 10
+
+Examined 349655/334635 game states in 5.015 s.
+
+Opponent moves: a6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O O O @ @ @ O
+5 O O @ @ @ @ O O
+6 O O @ . @ O O O
+7 * . . @ O O O O
+8 . . . . O O O O
+Score: 12-44
 
 Valid moves: a7  
 
@@ -1062,131 +1031,59 @@ Player moves: a7
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O O O @ @ @ O
+5 O O @ @ @ @ O O
+6 O @ @ * @ O O O
+7 @ * * @ O O O O
+8 * . * . O O O O
+Score: 14-43
+
+Valid moves: d6  b7  c7  a8  c8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+Time remaining. Increasing depth to 9
+Time remaining. Increasing depth to 10
+Time remaining. Increasing depth to 11
+Time remaining. Increasing depth to 12
+
+Examined 661968/519006 game states in 5.015 s.
+
+Opponent moves: d6
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O O O @ O @ O
 5 O O O O O @ O O
-6 O O O O * O * O
-7 @ @ @ @ @ @ @ @
-8 * * O * O O . *
-Score: 9-48
-
-Valid moves: e6  g6  a8  b8  d8  h8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-Time remaining. Increasing depth to 10
-
-Examined 509604/424381 game states in 5.015 s.
-
-Opponent moves: e6
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O . O
-7 @ @ @ O O @ @ @
-8 . . O . O O . .
-Score: 6-52
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O * O
-7 @ @ @ O O @ @ @
-8 * * O * O O * *
-Score: 6-52
-
-Valid moves: g6  a8  b8  d8  g8  h8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-Time remaining. Increasing depth to 10
-Time remaining. Increasing depth to 11
-
-Examined 698669/547253 game states in 5.016 s.
-
-Opponent moves: d8
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O . O
-7 @ @ O O O @ @ @
-8 . . O O O O . .
-Score: 5-54
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O * O
-7 @ @ O O O @ @ @
-8 * * O O O O * *
-Score: 5-54
-
-Valid moves: g6  a8  b8  g8  h8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-Time remaining. Increasing depth to 10
-Time remaining. Increasing depth to 11
-Time remaining. Increasing depth to 12
-Time remaining. Increasing depth to 13
-
-Examined 981765/753493 game states in 5.015 s.
-
-Opponent moves: g6
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
 6 O O O O O O O O
-7 @ @ O O O O @ @
-8 . . O O O O . .
-Score: 4-56
+7 @ * . @ O O O O
+8 . . . . O O O O
+Score: 7-51
+
+Valid moves: b7  
+
+Player moves: b7
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O O O
-7 @ @ O O O O @ @
-8 * * O O O O * *
-Score: 4-56
+2 O O O O @ O O O
+3 O O O O O @ O O
+4 O O O O @ O @ O
+5 O O O @ O @ O O
+6 O O @ O O O O O
+7 @ @ * @ O O O O
+8 * * * * O O O O
+Score: 10-49
 
-Valid moves: a8  b8  g8  h8  
+Valid moves: c7  a8  b8  c8  d8  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -1200,78 +1097,34 @@ Time remaining. Increasing depth to 11
 Time remaining. Increasing depth to 12
 Time remaining. Increasing depth to 13
 Time remaining. Increasing depth to 14
-Time remaining. Increasing depth to 15
 
-Examined 1238943/948317 game states in 5.015 s.
-
-Opponent moves: b8
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O O O
-7 @ O O O O O @ @
-8 . O O O O O . .
-Score: 3-58
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O O O
-7 @ O O O O O @ @
-8 * O O O O O * *
-Score: 3-58
-
-Valid moves: a8  g8  h8  
-Time remaining. Increasing depth to 2
-Time remaining. Increasing depth to 3
-Time remaining. Increasing depth to 4
-Time remaining. Increasing depth to 5
-Time remaining. Increasing depth to 6
-Time remaining. Increasing depth to 7
-Time remaining. Increasing depth to 8
-Time remaining. Increasing depth to 9
-Time remaining. Increasing depth to 10
-Time remaining. Increasing depth to 11
-Time remaining. Increasing depth to 12
-Time remaining. Increasing depth to 13
-Time remaining. Increasing depth to 14
-Time remaining. Increasing depth to 15
-Time remaining. Increasing depth to 16
-
-Examined 1385026/1061259 game states in 5.015 s.
+Examined 1307771/1004018 game states in 5.016 s.
 
 Opponent moves: a8
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
+2 O O O O @ O O O
 3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
 6 O O O O O O O O
-7 O O O O O O @ @
-8 O O O O O O . .
-Score: 2-60
+7 O O . @ O O O O
+8 O . . . O O O O
+Score: 4-56
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
+2 O O O O @ O O O
 3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
 6 O O O O O O O O
-7 O O O O O O @ @
-8 O O O O O O * *
-Score: 2-60
+7 O O * @ O O O O
+8 O . * * O O O O
+Score: 4-56
 
-Valid moves: g8  h8  
+Valid moves: c7  c8  d8  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -1287,35 +1140,38 @@ Time remaining. Increasing depth to 13
 Time remaining. Increasing depth to 14
 Time remaining. Increasing depth to 15
 Time remaining. Increasing depth to 16
-Time remaining. Increasing depth to 17
 
-Examined 1381706/1059797 game states in 5.016 s.
+Examined 1410448/1083974 game states in 5.015 s.
 
-Opponent moves: g8
-
-  a b c d e f g h
-1 O O O O O O O O
-2 O O O O O O O O
-3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O O O
-7 O O O O O O O @
-8 O O O O O O O .
-Score: 1-62
+Opponent moves: c7
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
+2 O O O O @ O O O
 3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
 6 O O O O O O O O
-7 O O O O O O O @
-8 O O O O O O O *
-Score: 1-62
+7 O O O O O O O O
+8 O . * . O O O O
+Score: 3-58
 
-Valid moves: h8  
+Valid moves: c8  
+
+Player moves: c8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
+6 O O O O @ O O O
+7 O O O @ O O O O
+8 O . @ * O O O O
+Score: 6-56
+
+Valid moves: d8  
 Time remaining. Increasing depth to 2
 Time remaining. Increasing depth to 3
 Time remaining. Increasing depth to 4
@@ -1334,22 +1190,67 @@ Time remaining. Increasing depth to 16
 Time remaining. Increasing depth to 17
 Time remaining. Increasing depth to 18
 
-Examined 1478712/1133276 game states in 5.016 s.
+Examined 1490191/1141891 game states in 5.015 s.
 
-Opponent moves: h8
+Opponent moves: d8
 
   a b c d e f g h
 1 O O O O O O O O
-2 O O O O O O O O
+2 O O O O @ O O O
 3 O O O O O O O O
-4 O O O O O O O O
-5 O O O O O O O O
-6 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
+6 O O O O @ O O O
+7 O O O O O O O O
+8 O . @ O O O O O
+Score: 5-58
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
+6 O O O O @ O O O
+7 O O O O O O O O
+8 O * @ O O O O O
+Score: 5-58
+
+Valid moves: b8  
+Time remaining. Increasing depth to 2
+Time remaining. Increasing depth to 3
+Time remaining. Increasing depth to 4
+Time remaining. Increasing depth to 5
+Time remaining. Increasing depth to 6
+Time remaining. Increasing depth to 7
+Time remaining. Increasing depth to 8
+Time remaining. Increasing depth to 9
+Time remaining. Increasing depth to 10
+Time remaining. Increasing depth to 11
+Time remaining. Increasing depth to 12
+Time remaining. Increasing depth to 13
+Time remaining. Increasing depth to 14
+Time remaining. Increasing depth to 15
+Time remaining. Increasing depth to 16
+Time remaining. Increasing depth to 17
+Time remaining. Increasing depth to 18
+
+Examined 1483369/1136815 game states in 5.016 s.
+
+Opponent moves: b8
+
+  a b c d e f g h
+1 O O O O O O O O
+2 O O O O @ O O O
+3 O O O O O O O O
+4 O O O O O O @ O
+5 O O O O O @ O O
+6 O O O O @ O O O
 7 O O O O O O O O
 8 O O O O O O O O
-Score: 0-64
+Score: 4-60
 
-Score: 0-64
+Score: 4-60
 Game over.
 
-Game took 180.156 s.
+Game took 161.626 s.

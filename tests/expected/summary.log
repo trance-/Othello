@@ -7,45 +7,45 @@ Score:
 Time: 
 Moves: 
 output/2-depth1-rev.out
-Score: 55-9
-Time: 1.218
-Moves: O d3 @ c3 O c4 @ e3 O f3 @ g3 O f6 @ b5 O c2 @ c1 O h3 @ e2 O e1 @ f1 O g1 @ f4 O d1 @ h1 O a6 @ d2 O f5 @ f2 O b1 @ a1 O b2 @ a2 @ b3 O a3 @ a4 @ b4 @ g4 O g2 @ h2 O h4 @ g5 O h5 @ b6 O c6 @ d6 O c5 @ e6 O a5 @ g6 O h6 @ a7 O b7 @ c7 O a8 @ d7 O d8 @ e7 O e8 @ f7 O f8 @ g7 O c8 @ h7 O g8 @ b8 @ h8 
+Score: 28-36
+Time: 1.171
+Moves: O d3 @ c3 O c4 @ e3 O f3 @ g3 O f6 @ b5 O f2 @ e1 O h3 @ f4 O g1 @ f1 O d1 @ d2 O f5 @ g2 O h1 @ g4 O b4 @ c1 O b1 @ b2 O a1 @ c2 O h4 @ a2 O a3 @ b3 O a5 @ e2 O a6 @ h2 O a4 @ c5 O c6 @ g5 O h6 @ h5 @ b6 O a7 @ d6 O e6 @ g6 O h7 @ b7 O a8 @ c7 O c8 @ d7 O d8 @ e7 O f8 @ f7 O g8 @ b8 O g7 @ e8 @ h8 
 output/2-depth1.out
-Score: 49-14
-Time: 1.187
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O c4 @ b5 O f6 @ f4 O d2 @ c1 O h3 @ c2 O d1 @ e1 O a6 @ e2 O f1 @ g1 O b1 @ a1 O b2 @ a2 O f2 @ g2 O h1 @ h2 O f5 @ b3 O a3 @ a4 @ b4 @ g4 O c5 @ h4 O h5 @ b6 O a5 @ c6 O d6 @ g5 O e6 @ g6 O h6 @ a7 @ b7 O a8 @ c7 O b8 @ d7 O c8 @ e7 O d8 @ f7 O e8 @ g7 O f8 @ h7 O h8 
+Score: 24-40
+Time: 1.406
+Moves: @ e3 O f3 @ g3 O e2 @ d1 O h3 @ f2 O f1 @ g1 O h1 @ f4 O e1 @ g2 O c1 @ h2 O h4 @ g4 O h5 @ d2 O c3 @ b2 O b4 @ c2 O a1 @ a2 O a3 @ c4 O f6 @ a4 O a5 @ c5 O c6 @ g5 O h6 @ d3 O b3 @ b1 O f5 @ b5 O a6 @ b6 O a7 @ d6 O e6 @ g6 O g7 @ b7 O a8 @ c7 O c8 @ d7 O e8 @ f7 O f8 @ h7 O h8 @ b8 O d8 @ e7 @ g8 
 output/2-depth2-rev.out
-Score: 11-53
-Time: 1.218
-Moves: O d3 @ c3 O c4 @ e3 O f4 @ g3 O f6 @ b4 O f3 @ f2 O a4 @ a5 O a6 @ b5 O c6 @ c5 O c2 @ b2 O a1 @ d2 O h3 @ c1 O a3 @ a2 O d1 @ e1 O f1 @ g1 O b1 @ h2 O h1 @ d6 O h4 @ e2 O b3 @ g2 O g4 @ f5 O g5 @ h5 O h6 @ b6 O e6 @ g6 O g7 @ a7 O a8 @ b7 O c8 @ d7 O d8 @ e7 O c7 @ f7 O f8 @ h7 O h8 @ e8 O g8 @ b8 
+Score: 30-34
+Time: 1.234
+Moves: O d3 @ c3 O c4 @ e3 O f4 @ g3 O f6 @ b4 O h2 @ g4 O d2 @ c1 O h4 @ e2 O a4 @ a5 O a6 @ b5 O f1 @ e1 O c2 @ g1 O d1 @ b2 O h1 @ b3 O a1 @ b1 O a3 @ c5 O f3 @ a2 O c6 @ f2 @ h3 O g2 @ f5 O h5 @ b6 O g5 @ d6 O e6 @ g6 O h6 @ a7 O a8 @ b7 O c8 @ c7 O d8 @ d7 O e8 @ f7 O f8 @ g7 O h8 @ h7 O e7 @ b8 @ g8 
 output/2-depth2.out
-Score: 25-39
-Time: 1.25
-Moves: @ e3 O d3 @ c2 O f6 @ c4 O c3 @ b3 O f4 @ g4 O f3 @ e2 O h4 @ f5 O d1 @ e1 O f1 @ f2 O e6 @ h5 O h6 @ c6 O h3 @ g5 O g3 @ g1 O h1 @ g2 O a3 @ a2 O a1 @ b2 O c1 @ b1 O a4 @ d2 O h2 @ b4 O a5 @ b5 O a6 @ b6 O d6 @ c5 O g6 @ a7 O a8 @ b7 O c8 @ c7 O d8 @ e7 O f8 @ d7 O e8 @ g7 O h8 @ h7 O f7 @ b8 @ g8 
+Score: 9-55
+Time: 1.171
+Moves: @ e3 O d3 @ c2 O f6 @ c4 O c3 @ b3 O f4 @ g4 O f3 @ e2 O h4 @ f5 O d1 @ e1 O f1 @ f2 O e6 @ h5 O h6 @ c6 O h3 @ g5 O b4 @ g3 O a3 @ a2 O a1 @ b2 O c1 @ b1 O a4 @ g1 O h1 @ d2 O g2 @ h2 O b7 @ a5 O a6 @ c5 O b5 @ b6 O a7 @ d6 O d7 @ g6 O f7 @ c7 O c8 @ e7 O g7 @ h7 O h8 @ b8 O a8 @ d8 O e8 @ f8 O g8 
 output/2-depth3-rev.out
 Score: 13-51
-Time: 1.406
-Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O e3 @ b2 O a1 @ c2 O g3 @ a2 O f1 @ g4 O a3 @ g1 O h1 @ e2 O c1 @ g2 O h3 @ h2 O d3 @ d1 O e1 @ d2 O b1 @ h4 O b3 @ b4 O h5 @ g5 O h6 @ f5 O f6 @ c6 O a4 @ a5 O b5 @ c5 O a6 @ d6 O b6 @ g6 O f7 @ b7 O a8 @ c7 O c8 @ d7 O d8 @ e7 O e8 @ g7 O h8 @ b8 O h7 @ a7 @ f8 O g8 
+Time: 1.218
+Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O e3 @ b2 O a1 @ c2 O g3 @ a2 O f1 @ g4 O a3 @ g1 O h1 @ e2 O c1 @ g2 O h3 @ h2 O b3 @ a4 O h4 @ b1 O a5 @ d1 O e1 @ d2 O d3 @ b4 O b5 @ c5 O c6 @ f5 O f6 @ g5 O h5 @ b6 O a6 @ d6 O d7 @ g6 O h6 @ a7 O a8 @ b7 O c8 @ c7 O e7 @ f7 O f8 @ g7 O b8 @ h7 O h8 @ d8 O e8 @ g8 
 output/2-depth3.out
-Score: 12-52
-Time: 1.312
-Moves: @ e3 O d3 @ c2 O f3 @ c3 O c4 @ g3 O c1 @ b1 O a1 @ b2 O a3 @ a2 O b3 @ a4 O a5 @ b4 O d1 @ f4 O h3 @ d2 O e1 @ f2 O g4 @ h2 O h1 @ h4 O e2 @ c5 O h5 @ g2 O e6 @ f5 O c6 @ b5 O a6 @ g5 O h6 @ g6 O b6 @ a7 O f1 @ g1 O a8 @ d6 O f6 @ d7 O d8 @ c7 O e7 @ f7 O b7 @ g7 O h8 @ h7 O g8 @ e8 O b8 @ c8 O f8 
-output/2-depth4-rev.out
-Score: 0-57
-Time: 1.937
-Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O d3 @ c2 O e3 @ d2 O d1 @ c1 O b1 @ b2 O a1 @ a2 O e1 @ e2 O a3 @ b3 O c5 @ b4 O a4 @ b6 O c6 @ b5 O a6 @ f5 O a5 @ a7 O f1 @ d6 O a8 @ f6 O g3 @ g1 O h1 @ g2 O h2 @ h3 O g4 @ g5 O h6 @ h4 O h5 O g7 @ g6 O e7 @ g8 O h8 O b7 O f7 O f8 
-output/2-depth4.out
-Score: 0-44
+Score: 2-61
 Time: 1.171
-Moves: @ e3 O d3 @ c2 O f6 @ c4 O c3 @ b3 O a2 @ a3 O a4 @ b4 O f3 @ b2 O a1 @ b1 O c1 @ d1 O e1 @ d2 O a5 @ e2 O c5 @ g3 O f1 @ f2 O g1 @ g2 O h1 @ h2 O h3 @ f4 O f5 @ g4 O h5 @ b5 O b6 @ g5 O h6 @ c6 O c7 
+Moves: @ e3 O d3 @ c2 O f6 @ c4 O c3 @ b3 O a2 @ a3 O a4 @ b4 O f3 @ b2 O a1 @ b1 O c1 @ d1 O e1 @ d2 O e2 @ f1 O g1 @ g3 O a5 @ f4 O f2 @ b5 O h3 @ g2 O h1 @ h2 O h4 @ h5 O a6 @ b6 O c6 @ d6 O h6 @ b7 O g4 @ g7 O h8 @ f5 O c5 @ f7 O a7 @ h7 O a8 @ e6 O g8 @ d7 O f8 @ e7 O d8 @ c7 O e8 @ c8 O g6 O b8 
+output/2-depth4-rev.out
+Score: 12-52
+Time: 1.812
+Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O e3 @ b2 O a1 @ c2 O g4 @ a2 O f1 @ h4 O a3 @ g1 O h1 @ e2 O c1 @ c6 O b3 @ a4 O b4 @ a5 O b5 @ c5 O b6 @ d2 O d1 @ g2 O a6 @ d6 O h3 @ h2 O e1 @ d3 O g3 @ f5 O h5 @ b1 O f6 @ g5 O h6 @ g6 O b7 @ c7 O c8 @ b8 O a8 @ a7 O d8 @ d7 O e8 @ e7 O f8 @ f7 O g8 @ g7 O h7 O h8 
+output/2-depth4.out
+Score: 12-52
+Time: 1.593
+Moves: @ e3 O d3 @ c2 O f6 @ c4 O c3 @ b3 O f2 @ e2 O f3 @ g1 O a3 @ a2 O a1 @ g3 O e1 @ d1 O c1 @ f4 O h3 @ d2 O f1 @ b1 O h1 @ g2 O f5 @ b2 O h2 @ g4 O a4 @ b4 O a5 @ b5 O a6 @ b6 O c5 @ c6 O a7 @ g5 O h6 @ h5 O h4 @ b7 O d6 @ e6 O g6 @ c7 O a8 @ d7 O c8 @ e7 O f8 @ f7 O g8 @ h7 O h8 @ b8 O g7 @ d8 O e8 
 output/2-depth5-rev.out
-Score: 5-59
-Time: 4.125
-Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O g3 @ b2 O f1 @ g2 O h1 @ g4 O a1 @ g1 O e3 @ e1 O d1 @ c2 O h5 @ a2 O a3 @ d2 O c1 @ h4 O h3 @ e2 O d3 @ h2 O b1 @ c5 O c6 @ b3 O a4 @ b4 O a5 @ f5 O b5 @ b6 O a6 @ d6 O g5 @ f6 O g6 @ h6 O h7 @ a7 O a8 @ b7 O b8 @ c7 O c8 @ e7 O d7 @ g7 O d8 @ f7 O e8 @ f8 O h8 O g8 
+Score: 0-40
+Time: 2.203
+Moves: O e6 @ f4 O f3 @ f2 O c3 @ c4 O g3 @ b2 O f1 @ g2 O h1 @ g4 O a1 @ g1 O h5 @ e1 O d1 @ c2 O h4 @ a2 O a3 @ e2 O c1 @ h2 O h3 @ c6 O c5 @ b4 O d2 @ b6 O a4 @ e3 O a7 @ a6 O a5 O d6 
 output/2-depth5.out
-Score: 5-56
-Time: 2.89
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f4 @ h2 O h1 @ f2 O d1 @ e1 O f1 @ g1 O b1 @ c4 O g2 @ c5 O g4 @ h4 O h5 @ c2 O b3 @ a2 O a4 @ b2 O c6 @ b4 O a5 @ b5 O a1 @ b7 O a3 O a6 @ b6 O a7 @ d6 O a8 @ c7 O d8 @ b8 O f5 @ g5 O h6 O f6 O c8 @ d7 O e8 O e6 @ g6 O e7 @ f8 O f7 O g8 
+Score: 15-49
+Time: 3.125
+Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f6 @ c2 O e1 @ f1 O g1 @ f4 O f5 @ g4 O h4 @ c5 O f2 @ g2 O h1 @ h2 O d1 @ g5 O b1 @ b2 O a1 @ a2 O a3 @ b3 O h5 @ c4 O a4 @ h6 O g6 @ e6 O h7 @ g7 O h8 @ b4 O a5 @ d6 O c6 @ b5 O a6 @ b6 O c7 @ a7 O a8 @ b7 O b8 @ d7 O e8 @ c8 O f7 @ e7 O d8 @ f8 O g8 
 output/2-depth6-rev.out
 Score: 
 Time: 
@@ -63,13 +63,13 @@ Score:
 Time: 
 Moves: 
 output/2-timebased2.out
-Score: 5-59
-Time: 65.093
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f4 @ h2 O h1 @ f2 O d1 @ e1 O f1 @ g1 O b1 @ c4 O g2 @ c5 O g4 @ h4 O h5 @ c2 O b3 @ a2 O a4 @ b2 O c6 @ b4 O a5 @ b5 O a1 @ b7 O a3 O a6 @ b6 O a7 @ d6 O a8 @ c7 O d8 @ b8 O f6 @ f5 O c8 @ d7 O e8 @ f7 O g7 @ h7 O e7 @ e6 O g5 @ g6 O h6 @ f8 O g8 O h8 
+Score: 10-54
+Time: 63.312
+Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f6 @ c2 O e1 @ f1 O g1 @ f4 O f5 @ g4 O h4 @ c5 O f2 @ g2 O h1 @ h2 O d1 @ g5 O b1 @ b2 O a1 @ a2 O a3 @ b3 O h5 @ c4 O a4 @ h6 O g6 @ e6 O h7 @ g7 O h8 @ b4 O a5 @ d6 O c6 @ b5 O a6 @ b6 O c7 @ a7 O a8 @ b7 O b8 @ d7 O e7 @ f7 O e8 @ c8 O d8 @ f8 O g8 
 output/2-timebased5.out
-Score: 0-64
-Time: 180.156
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f4 @ h2 O h1 @ f2 O d1 @ e1 O f1 @ g1 O b1 @ c4 O g2 @ c5 O g4 @ h4 O h5 @ c2 O b3 @ a2 O a4 @ b2 O c6 @ b4 O a5 @ b5 O a1 @ b7 O a3 O a6 @ b6 O g5 O f6 @ f5 O d6 @ d7 O e8 @ f7 O e7 @ c7 O f8 @ g7 O h6 @ h7 O c8 @ a7 O e6 O d8 O g6 O b8 O a8 O g8 O h8 
+Score: 4-60
+Time: 161.626
+Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f6 @ c2 O e1 @ f1 O g1 @ f4 O f5 @ g4 O h4 @ c5 O f2 @ g2 O h1 @ h2 O d1 @ g5 O b1 @ b2 O a1 @ a2 O a3 @ b3 O a4 @ c4 O g6 @ h5 O h6 @ f7 O e8 @ g7 O h8 @ e6 O h7 @ f8 O g8 @ b4 O e7 @ c6 O a5 @ d7 O b6 @ b5 O a6 @ a7 O d6 @ b7 O a8 O c7 @ c8 O d8 O b8 
 output/3-autodepth-rev.out
 Score: 
 Time: 
@@ -79,45 +79,45 @@ Score:
 Time: 
 Moves: 
 output/3-depth1-rev.out
-Score: 50-14
-Time: 1.187
-Moves: O d3 @ c3 O c4 @ e3 O f3 @ g3 O f6 @ c6 O f4 @ c5 O f2 @ e1 O h3 @ h4 O h5 @ f5 O f1 @ g1 O b4 @ a3 O a4 @ a5 O e2 @ g4 O b5 @ a6 O d1 @ c1 O c2 @ d2 O c7 @ c8 O b3 @ g5 O h6 @ b1 O b6 @ a7 O d6 @ e6 O b8 @ a8 O b7 @ d8 O g6 @ d7 O f7 @ f8 O e8 @ e7 O g8 @ h8 O g7 @ h7 O h2 @ h1 O g2 @ a2 O b2 @ a1 
+Score: 43-21
+Time: 1.484
+Moves: O d3 @ c3 O c4 @ e3 O f3 @ g3 O f6 @ c6 O d2 @ c1 O h3 @ c2 O d1 @ e1 O b1 @ a1 O b2 @ a3 O a2 @ b4 O a4 @ a5 O c5 @ e2 O f1 @ g1 O f2 @ h4 O h5 @ f4 O h2 @ b3 O g4 @ f5 O e6 @ b5 O a6 @ a7 O g2 @ h1 O d6 @ h6 O b6 @ g6 O h7 @ h8 O b7 @ a8 O b8 @ c8 O c7 @ d8 O g7 @ f8 O g8 @ d7 O e8 @ f7 O g5 O e7 
 output/3-depth1.out
-Score: 52-12
-Time: 1.468
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O c4 @ c6 O f6 @ c5 O e2 @ f1 O h3 @ f4 O e1 @ d1 O f5 @ e6 O b4 @ a3 O a4 @ a5 O d2 @ g4 O b5 @ c1 O h4 @ a6 O c2 @ h5 O h6 @ b1 O b3 @ g6 O d6 @ g5 O b6 @ a7 O b7 @ a8 O b8 @ c8 O c7 @ d8 O f2 @ d7 O f7 @ f8 O e8 @ e7 O g8 @ h8 O g7 @ h7 O b2 @ h2 @ a1 O a2 @ g1 O g2 @ h1 
+Score: 0-53
+Time: 1.031
+Moves: @ e3 O f3 @ g3 O e2 @ d1 O h3 @ f4 O e1 @ f1 O d3 @ h2 O h1 @ c3 O b3 @ g2 O g1 @ a3 O c1 @ c6 O c4 @ c2 O a4 @ a5 O g4 @ b1 O a1 @ a2 O a6 @ h4 O h5 @ f2 O c5 @ b2 O f6 @ d2 O f5 @ b4 O b5 @ g5 O h6 @ g7 O h8 @ f7 O f8 O d6 @ e6 O b6 @ c7 O c8 
 output/3-depth2-rev.out
-Score: 51-13
-Time: 1.313
-Moves: O d3 @ c3 O c4 @ e3 O f4 @ g3 O f6 @ c5 O b2 @ c2 O b3 @ a1 O c1 @ a3 O a2 @ b1 O a4 @ a5 O d2 @ d1 O f2 @ e1 O c6 @ f3 O e2 @ b4 O h3 @ f1 O f5 @ g4 O g5 @ h6 O h4 @ d6 O e6 @ g6 O b5 @ a6 O b6 @ a7 O g2 @ h5 O h7 @ h1 O g1 @ h2 O b7 @ h8 @ a8 O d7 @ c8 O b8 @ c7 O e8 @ d8 O e7 @ g7 O g8 @ f8 @ f7 
+Score: 55-8
+Time: 1.5
+Moves: O d3 @ c3 O c4 @ e3 O f4 @ g3 O f6 @ d6 O c6 @ c5 O e6 @ c7 O b6 @ a5 O h2 @ g6 O b4 @ b3 O d2 @ d1 O a3 @ c2 O b5 @ a6 O c8 @ d7 O d8 @ f2 O h6 @ h4 O f3 @ g4 O f1 @ e2 O f5 @ g5 O b1 @ e7 O f8 @ e8 O e1 @ g1 O h5 @ h7 O a7 @ a8 O b7 @ b8 O f7 @ g8 O a4 @ a2 O b2 @ a1 O g2 @ h1 @ h3 @ c1 @ g7 
 output/3-depth2.out
-Score: 45-19
-Time: 1.546
-Moves: @ e3 O d3 @ c3 O f3 @ g3 O c4 @ c6 O f6 @ c5 O b2 @ c2 O f4 @ a1 O d6 @ f5 O b6 @ c7 O e6 @ a5 O c1 @ b1 O h3 @ d1 O c8 @ g6 O e7 @ d7 O d8 @ d2 O h6 @ b3 O a3 @ f2 O f1 @ f8 O b5 @ g5 O f7 @ e2 O b4 @ g4 O h4 @ h5 O a7 @ g8 O a4 @ a2 O e1 @ g1 O g2 @ a6 O b7 @ a8 O g7 @ h8 O h7 @ h1 O h2 @ b8 @ e8 
+Score: 17-47
+Time: 1.265
+Moves: @ e3 O d3 @ c3 O f3 @ g3 O c4 @ c6 O f6 @ c5 O b5 @ a6 O f2 @ f1 O h3 @ f5 O b4 @ a3 O f4 @ f7 O g4 @ h5 O f8 @ e6 O e2 @ e1 O b6 @ a7 O d6 @ g6 O g5 @ h6 O c2 @ c1 O d1 @ e8 O d8 @ h2 O h1 @ g2 O g1 @ d2 O b1 @ b2 O a1 @ b3 O c7 @ e7 O h4 @ c8 O b8 @ a2 O h7 @ d7 O a4 @ b7 O a8 @ a5 O g8 @ g7 O h8 
 output/3-depth3-rev.out
-Score: 38-26
-Time: 2.078
-Moves: O e6 @ f4 O f3 @ d6 O c6 @ e3 O d3 @ c3 O b3 @ f2 O g3 @ f5 O e1 @ a3 O f6 @ h3 O e2 @ g1 O c4 @ f7 O c5 @ b6 O g8 @ d7 O d8 @ c7 O a5 @ a7 O b5 @ b8 O e7 @ d2 O d1 @ b4 O c2 @ b1 O g2 @ e8 O c8 @ h1 O a8 @ f8 O h2 @ h8 O a6 @ f1 O c1 @ h4 O a1 @ b2 O a4 @ a2 O g4 @ b7 O g5 @ h5 O g7 @ g6 O h6 @ h7 
+Score: 53-11
+Time: 1.687
+Moves: O e6 @ f4 O f3 @ d6 O c6 @ e3 O e2 @ f2 O d3 @ e1 O g3 @ f5 O g1 @ c3 O b3 @ d2 O f6 @ h3 O c1 @ a3 O c2 @ c4 O c5 @ b4 O b2 @ g4 O d1 @ f1 O a4 @ a5 O h4 @ h5 O g2 @ h1 O h2 @ g5 O g6 @ h6 O b5 @ b1 O h7 @ a1 O a2 @ h8 O a6 @ a7 @ b6 O d7 @ c8 O c7 @ d8 O g7 @ b7 O f7 @ g8 O e7 @ f8 O e8 O b8 @ a8 
 output/3-depth3.out
-Score: 28-36
-Time: 1.765
-Moves: @ e3 O d3 @ c3 O f3 @ g3 O c2 @ d2 O d1 @ c6 O h3 @ c4 O c5 @ b3 O a3 @ e2 O f4 @ f5 O e1 @ f2 O d6 @ g4 O h4 @ e6 O f1 @ b4 O a4 @ b1 O g6 @ b5 O a5 @ h7 O f6 @ a6 O a7 @ g5 O h5 @ h2 O h1 @ f7 O c1 @ h6 O h8 @ b2 O a1 @ a2 O b6 @ a8 O f8 @ g8 O e8 @ g7 O g2 @ g1 O e7 @ b7 O c7 @ c8 O b8 @ d8 O d7 
+Score: 60-0
+Time: 1.562
+Moves: @ e3 O d3 @ c3 O f3 @ g3 O g2 @ f4 O h3 @ c6 O b7 @ c5 O e2 @ e1 O d1 @ c1 O c4 @ h1 O d6 @ c7 O b5 @ h2 O f1 @ g1 O c2 @ h4 O c8 @ b1 O f6 @ b3 O f2 @ d2 O g4 @ h5 O e6 @ f5 O a2 @ a4 O b2 @ a5 O a6 @ a1 O b4 @ a3 O g5 @ h6 @ a7 @ b6 @ g6 O d7 @ a8 O e7 @ b8 @ d8 O e8 @ f7 @ f8 
 output/3-depth4-rev.out
-Score: 33-31
-Time: 6.921
-Moves: O e6 @ f4 O f3 @ d6 O c6 @ e3 O f5 @ f6 O g6 @ c5 O c3 @ e7 O d7 @ g5 O h5 @ h6 O h7 @ g3 O d3 @ b3 O f8 @ d8 O f7 @ g4 O f2 @ e1 O a3 @ b5 O c4 @ e2 O g1 @ d2 O c1 @ c2 O b1 @ f1 O d1 @ h3 O a6 @ b4 O b6 @ c7 O c8 @ b8 O a4 @ a5 O e8 @ g8 O g7 @ b2 O a1 @ a2 O b7 @ h4 O h2 @ h8 O g2 @ h1 @ a8 O a7 
-output/3-depth4.out
 Score: 27-37
-Time: 6.781
-Moves: @ e3 O d3 @ c3 O f3 @ f4 O f5 @ c6 O b3 @ f6 O f7 @ f2 O f1 @ a3 O c4 @ g3 O c2 @ c5 O h3 @ c1 O d6 @ g4 O b6 @ f8 O h4 @ c7 O b5 @ a6 O e6 @ g6 O g5 @ d7 O e7 @ e8 O c8 @ b4 O a4 @ a5 O d2 @ e1 O d1 @ g1 O h6 @ e2 O b2 @ h5 O b1 @ a1 O a2 @ b7 O b8 @ a8 O a7 @ d8 O g2 @ g7 O h8 @ h1 O h2 @ h7 O g8 
+Time: 5.25
+Moves: O e6 @ f4 O f3 @ d6 O c6 @ e3 O f5 @ f6 O d3 @ c3 O c4 @ c5 O g6 @ g3 O f2 @ e7 O h3 @ h6 O e8 @ f1 O e1 @ d1 O g4 @ h4 O f7 @ c7 O b3 @ a3 O c8 @ b6 O a6 @ g5 O e2 @ d8 O c2 @ c1 O d7 @ d2 O b4 @ a5 O b7 @ a8 O a7 @ b8 O a4 @ f8 O b5 @ h2 O h5 O h1 O g2 @ g1 O b1 @ b2 O a1 @ a2 O h7 @ g7 O h8 @ g8 
+output/3-depth4.out
+Score: 38-26
+Time: 4.578
+Moves: @ e3 O d3 @ c3 O f3 @ f5 O b3 @ c6 O c5 @ d2 O e1 @ a3 O b4 @ c4 O f4 @ f2 O g5 @ h5 O f1 @ c1 O e2 @ a4 O e6 @ c2 O f6 @ g6 O b5 @ g3 O a5 @ a6 O h3 @ d6 O b7 @ b6 O c7 @ d7 O f7 @ g4 O a7 @ a8 O c8 @ b8 O e7 @ f8 O h7 @ d8 O e8 @ g7 O h8 @ g8 O b1 @ a1 O h6 @ d1 O h4 @ g1 O a2 @ b2 O g2 @ h1 O h2 
 output/3-depth5-rev.out
-Score: 37-27
-Time: 29.718
-Moves: O e6 @ f6 O f5 @ f4 O g6 @ d6 O c6 @ d7 O c3 @ d3 O f3 @ e3 O c7 @ h6 O c4 @ f2 O d8 @ c5 O g3 @ e2 O e1 @ h3 O f1 @ g4 O f7 @ g5 O b4 @ f8 O h4 @ h5 O d2 @ c1 O h7 @ h8 O g8 @ e8 O g7 @ c8 O e7 @ h2 O c2 @ b1 O b2 @ a1 O b3 @ d1 O g2 @ a4 O b5 @ a5 O a6 @ h1 O g1 @ a7 O b6 @ b7 O a8 @ b8 O a3 @ a2 
+Score: 24-40
+Time: 24.156
+Moves: O e6 @ f6 O f5 @ d6 O c6 @ b6 O d7 @ f3 O a6 @ f4 O c3 @ d3 O e3 @ d8 O c4 @ b5 O g3 @ h2 O g5 @ f2 O g6 @ h6 O h3 @ g2 O h1 @ c5 O h5 @ e2 O a5 @ b3 O a3 @ a4 O e1 @ b4 O f1 @ g1 O f7 @ d2 O d1 @ g7 O e7 @ h4 O g4 @ c2 O h8 @ h7 O f8 @ g8 O c7 @ c8 O b7 @ e8 O b8 @ a2 O a1 @ c1 O b1 @ b2 @ a8 O a7 
 output/3-depth5.out
-Score: 15-49
-Time: 19.296
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c6 O h3 @ d1 O c5 @ c4 O e6 @ f5 O g4 @ g6 O b6 @ a6 O f4 @ e2 O b3 @ c2 O f6 @ h5 O h6 @ h7 O b4 @ b5 O g5 @ a5 O a4 @ a3 O f1 @ f2 O b1 @ d6 O b2 @ a1 O c1 @ e1 O a2 @ h2 O h1 @ g1 O g2 @ h4 O h8 O g7 @ f7 O e8 @ f8 O g8 @ d7 O e7 O d8 @ c8 O c7 @ b7 O a8 @ b8 O a7 
+Score: 4-60
+Time: 20.547
+Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f6 @ e6 O d6 @ e7 O f8 @ c4 O e1 @ f4 O f5 @ g5 O c6 @ d8 O f7 @ g4 O c2 @ d7 O h6 @ b1 O h4 @ h5 O g6 @ b5 O c5 @ g2 O a5 @ f2 O b4 @ b3 O a3 @ a4 O b6 @ c7 O a6 @ b7 O b8 @ e8 O d1 @ f1 O h1 @ h2 O g1 @ g8 O a8 @ a7 O c8 @ a2 O a1 @ h7 O b2 O g7 O h8 
 output/3-depth6-rev.out
 Score: 
 Time: 
@@ -135,14 +135,10 @@ Score:
 Time: 
 Moves: 
 output/3-timebased2.out
-Score: 35-29
-Time: 124.703
-Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c6 O h3 @ d1 O c5 @ c4 O e6 @ f4 O f5 @ f6 O g6 @ e7 O d7 @ g5 O e8 @ c8 O c7 @ f2 O h4 @ h6 O b3 @ e2 O f1 @ a3 O d6 @ g4 O f7 @ g8 O b5 @ b4 O c1 @ b1 O c2 @ b6 O a7 @ b8 O h5 @ h2 O d8 @ f8 O g7 @ h7 O a5 @ a6 O a4 @ g1 O h1 @ h8 O g2 @ a2 O a1 @ e1 O b2 @ a8 O b7 
+Score: 52-12
+Time: 125.703
+Moves: @ e3 O f3 @ g3 O d3 @ c3 O d2 @ c1 O h3 @ e2 O f6 @ e6 O d6 @ c2 O e1 @ f4 O f5 @ c5 O c4 @ g5 O h4 @ h6 O c6 @ c7 O g6 @ h7 O b3 @ b4 O a5 @ a3 O c8 @ d7 O d8 @ a2 O b5 @ f7 O g4 @ e7 O e8 @ f8 O g8 @ b2 O b6 @ d1 O a4 @ a6 O a7 @ a8 O b7 @ b8 O b1 @ a1 O g7 @ h8 @ f1 O f2 @ g1 O g2 @ h1 O h2 @ h5 
 output/3-timebased5.out
-Score: 20-44
-Time: 310.828
-Moves: @ e3 O f3 @ f4 O d3 @ c3 O b3 @ d2 O d1 @ a3 O f6 @ c4 O f5 @ c6 O b4 @ e6 O c2 @ g4 O h5 @ h3 O d6 @ a4 O b6 @ e7 O f8 @ c5 O g3 @ b1 O b5 @ a5 O e2 @ f1 O g6 @ f2 O g5 @ h6 O h4 @ d7 O d8 @ a6 O c7 @ e8 O f7 @ g2 O e1 @ c1 O h1 @ g7 O h2 @ b2 O b7 @ g8 O h8 @ g1 O h7 @ a8 O a1 @ c8 O a2 O a7 @ b8 
-output/summary.log
-Score: 20-44
-Time: 
-Moves: 
+Score: 25-39
+Time: 311.392
+Moves: @ e3 O f3 @ f4 O d3 @ c3 O b3 @ f2 O f5 @ f6 O e6 @ a3 O g6 @ d6 O c6 @ d7 O f1 @ h6 O c8 @ g5 O e2 @ g3 O c4 @ d1 O h3 @ c5 O c7 @ e7 O c2 @ b6 O a5 @ e8 O f7 @ a6 O a7 @ c1 O b5 @ f8 O h5 @ g4 O d2 @ b4 O g2 @ g8 O h4 @ h1 O h2 @ g1 O e1 @ g7 O d8 @ b7 O h8 @ h7 O b2 @ a1 O b1 O a2 O a8 @ b8 O a4 

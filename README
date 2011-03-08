@@ -1,1 +1,52 @@
+=================================
 C++ Othello
+Greg Campbell      March 8, 2011
+---------------------------------
+About:
+    This is a command-line version of Othello written in C++.
+    It has an AI that can run in time-limited and depth-limited search modes.
+
+Compilation:
+    Compile using g++
+
+    On Windows, you need MinGW. Install it and add the bin folder to your path.
+    On Linux, you're set.
+
+    Go to the folder and type g++ othello.cpp
+
+Arguments:
+    -m #
+            Sets the play mode.
+            0 = manual; 1 = randomly select a move;
+            2 = always select first move; 3 = AI controlled.
+    -f
+            If set, the opponent will get the first move. Otherwise, the player will go first.
+    -d #
+            Sets the AI search depth. If 0, the AI will select a depth based on the current move number.
+            If -1, the AI will randomly pick moves.
+    -t #
+            Sets the AI search timeout, in seconds. The AI will stop calculating a move if
+            it exceeds this time.
+    -T
+            Sets AI to time-limited mode. If set, the AI will continue to increase the
+            search depth until it runs out of time.
+    -c
+            If set, the screen will be cleared after each turn.
+    -v #
+            Sets the verbosity. A higher number will be more verbose.
+    -h
+            Displays the help message.
+
+Testing:
+    To run the test suite, from the main directory do the following:
+        $ tests\test.bat
+
+    This will run the tests listed in tests/tests.lst and output the results to the output directory.
+    Note that the test suite requires awk.
+
+    You can diff the results against the expected results by doing
+        $ tests\diff.bat
+
+    This will diff each of the files in the output directory with the corresponding file in the expected 
+    directory using vim diff.
+    
