@@ -206,8 +206,14 @@ int main(int argc, char **argv) {
         } else {                /* The user fucked up. */
             cout << "Unknown argument: " << argv[i] << endl;
             halp();
+            return 0;
         }
         i++;
+    }
+    if (i < argc && argv[i][0] != '-') {
+        cout << "Unknown argument: " << argv[i] << endl;
+        halp();
+        return 0;
     }
 
     /* Display the current settings. */
