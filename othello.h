@@ -271,7 +271,6 @@ bool Othello::GetScore( bool final ) {
     }
 
     cout << endl << "Score: " << b << "-" << w << endl;
-    if (b + w == SIZE*SIZE) return false;
 
     /* If the game is over, tell the user if they suck or not. */
     if (final) {
@@ -285,6 +284,8 @@ bool Othello::GetScore( bool final ) {
         cout << endl << "FINAL SCORE: " << b << "-" << w << endl;
         return false;
     }
+    /* Determine whether we've run out of moves or not. */
+    if (b + w == SIZE*SIZE) return false;
     return true;
 }
 
