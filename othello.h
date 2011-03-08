@@ -16,7 +16,7 @@ public:
     bool IsValidMove( bool color, int tile );
     Othello MakeMove( bool color, int tile );
     void FindValidMoves( bool color, vector<int>& retVal );
-    bool GetScore();
+    bool GetScore( bool final = false );
     int game_start();
 };
 
@@ -203,7 +203,7 @@ void Othello::FindValidMoves( bool color, vector<int>& retVal ) {
 }
 
 /* Calculate and print the score. */
-bool Othello::GetScore() {
+bool Othello::GetScore( bool final ) {
     int b = 0, w = 0;
     for ( int i = 0; i < SIZE*SIZE; i++) {
         if (board[i] == 1) {
@@ -213,7 +213,8 @@ bool Othello::GetScore() {
         }
     }
     cout << endl << "Score: " << b << "-" << w << endl;
-    if (b + w == SIZE*SIZE) {
+    if (b + w == SIZE*SIZE) return false;
+    if (final) {
         if (b == w) {
             cout << "DROW GAME" << endl;
         } else if (w > b) {
@@ -221,6 +222,7 @@ bool Othello::GetScore() {
         } else {
             cout << "YOU WIN. EXCELLENT." << endl;
         }
+        cout << endl << "FINAL SCORE: " << b << "-" << w << endl;
         return false;
     }
     return true;

@@ -90,7 +90,7 @@ void printNode( GameTree<State>::iterator itr, int color ) {
     for ( int i = 0; i < itr.depth(); ++i) {
         std::cout << "\t";
     }
-     std::cout << "Move: " << (char)((*itr).move%SIZE + 97) << (*itr).move/SIZE + 1 << ((*itr).color ? " O" : " @")
+     std::cout << "Move: " << printMove((*itr).move) << ((*itr).color ? " O" : " @")
         << " Value: " << color*(*itr).value << 
         "  (depth " << itr.depth() <<
         ", size " << itr.size() <<
@@ -131,7 +131,7 @@ pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, i
             for ( int i = 0; i < itr.depth()+1; ++i) {
                 std::cout << "\t";
             }
-            cout << "Entering " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": a = " << a << " b = " << b ;
+            cout << "Entering " << printMove((*child).move) << ": a = " << a << " b = " << b ;
         }
 
         pair<int, int> eval = gensearch(child, board.MakeMove( !(*child).color, (*child).move), d-1, -b, -a, -color);
@@ -141,7 +141,7 @@ pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, i
             for ( int i = 0; i < itr.depth()+1; ++i) {
                 std::cout << "\t";
             }
-            cout << "Leaving " << (char)((*child).move%SIZE + 97) << (*child).move/SIZE + 1 << ": ret = " << eval.first << " a = " << a << " b = " << b << endl;
+            cout << "Leaving " << printMove((*child).move) << ": ret = " << eval.first << " a = " << a << " b = " << b << endl;
         }
 
         if (-eval.first > a) {
@@ -158,7 +158,7 @@ pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, i
         for ( int i = 0; i < itr.depth(); ++i) {
             std::cout << "\t";
         }
-        cout << " d: " << d << " a: " << a << " b: " << b << " move: " << (char)((*itr).move%SIZE + 97) << (*itr).move/SIZE + 1 ;
+        cout << " d: " << d << " a: " << a << " b: " << b << " move: " << printMove((*itr).move);
     }
 
     return make_pair(a, move);
@@ -192,7 +192,7 @@ int ai_initialize( Othello board, bool color ) {
     int depth = g_searchdepth == 0 ? searchdepth[g_turn++] : g_searchdepth;
 
     pair<int, int> optimal;
-    if (g_timemode == 0) {
+    if (!g_timemode) {
         cout << "Depth: " << depth << endl;
         optimal = gensearch( itr, board, depth, -1000, 1000, color ? -1 : 1);
     } else {
@@ -202,7 +202,7 @@ int ai_initialize( Othello board, bool color ) {
     final=clock()-init;
     double totalTime = (double)final / ((double)CLOCKS_PER_SEC);
 
-    cout << endl << "Examined " << search_count << "/" << tree_count << " game states in " << totalTime << " s" << ((totalTime > g_timeout) ? " (timed out)." : ".") << endl;
+    cout << endl << "Examined " << search_count << "/" << tree_count << " game states in " << totalTime << " s" << ((totalTime > g_timeout && !g_timemode) ? " (timed out)." : ".") << endl;
 
     return optimal.second;
 }

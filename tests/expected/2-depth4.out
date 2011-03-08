@@ -1,9 +1,12 @@
+OTHELLO
+Settings: 
   Play mode:    	automatic
   Player first: 	Yes
   Clear screen: 	Yes
   Verbosity:    	0
   AI max depth: 	4 (fixed)
   AI timeout:   	30 seconds.
+  AI time mode: 	Depth-limited
 Enter moves in form xy (no space).
 
   a b c d e f g h
@@ -35,7 +38,7 @@ Score: 4-1
 Valid moves: d3  f3  f5  
 Depth: 4
 
-Examined 159/246 game states in 0.016 s.
+Examined 159/246 game states in 0 s.
 
 Opponent moves: d3
 
@@ -68,7 +71,7 @@ Score: 5-2
 Valid moves: d2  f2  f3  f4  f5  f6  
 Depth: 4
 
-Examined 540/1017 game states in 0.056 s.
+Examined 540/1017 game states in 0.032 s.
 
 Opponent moves: f6
 
@@ -101,7 +104,7 @@ Score: 6-3
 Valid moves: d2  e2  b3  c3  f3  
 Depth: 4
 
-Examined 484/951 game states in 0.051 s.
+Examined 484/951 game states in 0.031 s.
 
 Opponent moves: c3
 
@@ -134,7 +137,7 @@ Score: 7-4
 Valid moves: a2  b2  d2  e2  f2  f3  b4  f4  
 Depth: 4
 
-Examined 442/1246 game states in 0.064 s.
+Examined 442/1246 game states in 0.031 s.
 
 Opponent moves: a2
 
@@ -167,7 +170,7 @@ Score: 7-6
 Valid moves: c1  b2  d2  e2  f2  f3  a4  f4  
 Depth: 4
 
-Examined 393/815 game states in 0.107 s.
+Examined 393/815 game states in 0.016 s.
 
 Opponent moves: a4
 
@@ -200,7 +203,7 @@ Score: 9-6
 Valid moves: d1  b2  d2  e2  f3  f4  c5  
 Depth: 4
 
-Examined 657/1639 game states in 0.146 s.
+Examined 657/1639 game states in 0.047 s.
 
 Opponent moves: f3
 
@@ -233,7 +236,7 @@ Score: 7-10
 Valid moves: a1  b1  c1  d1  d2  b5  c5  
 Depth: 4
 
-Examined 263/795 game states in 0.071 s.
+Examined 263/795 game states in 0.031 s.
 
 Opponent moves: a1
 
@@ -266,7 +269,7 @@ Score: 6-13
 Valid moves: c1  d1  d2  a5  b5  c5  
 Depth: 4
 
-Examined 213/575 game states in 0.029 s.
+Examined 213/575 game states in 0.016 s.
 
 Opponent moves: c1
 
@@ -299,7 +302,7 @@ Score: 5-16
 Valid moves: e1  d2  a5  b5  c5  
 Depth: 4
 
-Examined 173/373 game states in 0.019 s.
+Examined 173/373 game states in 0 s.
 
 Opponent moves: e1
 
@@ -332,7 +335,7 @@ Score: 6-17
 Valid moves: e2  a5  b5  c5  
 Depth: 4
 
-Examined 219/458 game states in 0.024 s.
+Examined 219/458 game states in 0.015 s.
 
 Opponent moves: a5
 
@@ -365,7 +368,7 @@ Score: 6-19
 Valid moves: f2  c5  
 Depth: 4
 
-Examined 268/493 game states in 0.024 s.
+Examined 268/493 game states in 0.015 s.
 
 Opponent moves: c5
 
@@ -398,7 +401,7 @@ Score: 8-19
 Valid moves: f1  f2  g2  h3  f4  g4  
 Depth: 4
 
-Examined 279/598 game states in 0.028 s.
+Examined 279/598 game states in 0.016 s.
 
 Opponent moves: f1
 
@@ -431,7 +434,7 @@ Score: 8-21
 Valid moves: g1  g2  h3  f4  g4  h4  
 Depth: 4
 
-Examined 418/894 game states in 0.041 s.
+Examined 418/894 game states in 0.031 s.
 
 Opponent moves: g1
 
@@ -464,7 +467,7 @@ Score: 8-23
 Valid moves: h1  h2  h3  f4  g4  h4  
 Depth: 4
 
-Examined 165/365 game states in 0.016 s.
+Examined 165/365 game states in 0.015 s.
 
 Opponent moves: h1
 
@@ -497,7 +500,7 @@ Score: 8-25
 Valid moves: h3  g4  h4  
 Depth: 4
 
-Examined 189/305 game states in 0.014 s.
+Examined 189/305 game states in 0.016 s.
 
 Opponent moves: h3
 
@@ -530,7 +533,7 @@ Score: 8-27
 Valid moves: g4  f5  g5  
 Depth: 4
 
-Examined 302/476 game states in 0.021 s.
+Examined 302/476 game states in 0.016 s.
 
 Opponent moves: f5
 
@@ -563,7 +566,7 @@ Score: 7-30
 Valid moves: h4  g5  h5  
 Depth: 4
 
-Examined 346/578 game states in 0.025 s.
+Examined 346/578 game states in 0.016 s.
 
 Opponent moves: h5
 
@@ -596,7 +599,7 @@ Score: 6-33
 Valid moves: a6  b6  c6  
 Depth: 4
 
-Examined 186/287 game states in 0.013 s.
+Examined 186/287 game states in 0 s.
 
 Opponent moves: b6
 
@@ -629,7 +632,7 @@ Score: 5-36
 Valid moves: h4  g6  h6  
 Depth: 4
 
-Examined 131/219 game states in 0.009 s.
+Examined 131/219 game states in 0 s.
 
 Opponent moves: h6
 
@@ -662,7 +665,7 @@ Score: 5-38
 Valid moves: d6  b7  c7  d7  
 Depth: 4
 
-Examined 91/126 game states in 0.007 s.
+Examined 91/126 game states in 0.015 s.
 
 Opponent moves: c7
 
@@ -676,6 +679,11 @@ Opponent moves: c7
 7 . . O . . . . .
 8 . . . . . . . .
 Score: 0-44
+
+Score: 0-44
+YOU LOSE. PLAY AGAIN
+
+FINAL SCORE: 0-44
 Game over.
 
-Game took 1.765 s.
+Game took 1.171 s.

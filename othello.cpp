@@ -14,19 +14,15 @@
 #include "gametree.h"
 
 #define SIZE (8)
-#define SEARCH_DEPTH (0)
-#define VERBOSE (0)
-#define AUTO (0)
-#define DUMB_AI (false)
 
-int g_auto = AUTO;
-int g_searchdepth = SEARCH_DEPTH;
+int g_auto = 0;
+int g_searchdepth = 0;
 bool g_gofirst = true;
 bool g_clearscreen = true;
 int g_turn = 0;
-int g_verbose = VERBOSE;
+int g_verbose = 0;
 double g_timeout = 30;
-int g_timemode = 0;
+bool g_timemode = false;
 
 const char DIRS[8][2] = {{1, 0}, {1, 1}, {0, 1}, {-1, 1}, {-1, 0}, {-1, -1}, {0, -1}, {1, -1}};
  
@@ -50,6 +46,13 @@ void clear_screen() {
     }
 }
 
+string printMove( int move ) {
+    string s;
+    s += (char)(move%SIZE + 97);
+    s += (char)('0' + move/SIZE + 1);
+    return s;
+}
+ 
 using namespace Data_structures;
 #include "othello.h"
 
@@ -87,9 +90,7 @@ int game_start() {
             if (moves.size() > 0) {
                 cout << endl << "Valid moves: "; 
                 for ( int i = 0; i < moves.size(); i++) {
-                    char x = moves[i]%SIZE + 97;
-                    int y = moves[i]/SIZE + 1;
-                    cout << x << y << "  ";
+                    cout << printMove(moves[i]) << "  ";
                 }
                 cout << endl;
             }
@@ -118,25 +119,25 @@ int game_start() {
                         } while (!moveGood);
                     } else if (g_auto == 1) {
                         pos = moves[rand() % moves.size()];
-                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
+                        cout << endl << "Player moves: " << printMove(pos) << endl;
                     } else if (g_auto == 2) {
                         pos = moves[0];
-                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
+                        cout << endl << "Player moves: " << printMove(pos) << endl;
                     } else {
                         pos = ai_initialize( board, true );
-                        cout << endl << "Player moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
+                        cout << endl << "Player moves: " << printMove(pos) << endl;
                     }
                     clear_screen();
                 }
             } else {       /* Otherwise, it is computer's move. */
                 if (moves.size() > 0) {
-                    if (DUMB_AI) {
+                    if (g_searchdepth < 0) {
                         /* Randomly pick an available move. */
                         pos = moves[rand() % moves.size()];
                     } else {
                         pos = ai_initialize( board, false );
                     }
-                    cout << endl << "Opponent moves: " << (char)(pos%SIZE + 97) << pos/SIZE + 1 << endl;
+                    cout << endl << "Opponent moves: " << printMove(pos) << endl;
                 }
             }
             if (board.IsValidMove( color, pos )) {
@@ -152,7 +153,7 @@ int game_start() {
         }
 
     }
-
+    board.GetScore( true );
     cout << "Game over." << endl;
     g_final=clock()-g_init;
     cout << endl << "Game took " << (double)g_final / ((double)CLOCKS_PER_SEC) << " s." << endl;
@@ -160,46 +161,55 @@ int game_start() {
 }
 
 int main(int argc, char **argv) {
-    if (argc >= 2 && (*argv[1]) == 63) {
-        cout << "Othello Options: " << endl <<
-            "  Play mode: 0 = manual; 1 = random; 2 = fixed; 3 = AI" << endl <<
-            "  AI max search depth: 0 = auto; otherwise uses specified value" << endl <<
-            "  Player color: 0 = black; 1 = white" << endl <<
-            "  Clear screen each turn: 0 = false; 1 = true" << endl <<
-            "  AI search timeout: value in seconds" << endl;
-    } else {
-        if (argc >= 2) {
-            g_auto = atoi(argv[1]);
+    int i = 1;
+    while ((i < argc) && (argv[i][0]=='-')) {
+        string sw = argv[i];
+        if (sw=="-m") {
+            g_auto = atoi(argv[++i]);
+        } else if (sw=="-d") {
+            g_searchdepth = atoi(argv[++i]);
+        } else if (sw=="-f") {
+            g_gofirst = false;
+        } else if (sw=="-c") {
+            g_clearscreen = true;
+        } else if (sw=="-t") {
+            g_timeout = atoi(argv[++i]);
+        } else if (sw=="-T") {
+            g_timemode = true;
+        } else if (sw=="-v") {
+            g_verbose = atoi(argv[++i]);
+        } else if (sw=="-h") {
+            cout << "Othello Options: " << endl <<
+                "\t-m #" << endl << "\t\tSets the play mode." << endl << 
+                                    "\t\t0 = manual; 1 = randomly select a move;" << endl <<
+                                    "\t\t2 = always select first move; 3 = AI controlled." << endl << endl <<
+                "\t-f"   << endl << "\t\tIf set, the opponent will get the first move. Otherwise, the player will go first." << endl << endl <<
+                "\t-d #" << endl << "\t\tSets the AI search depth. If 0, the AI will select a depth based on the current move number." << endl <<
+                                    "\t\tIf -1, the AI will randomly pick moves." << endl << endl << 
+                "\t-t #" << endl << "\t\tSets the AI search timeout, in seconds. The AI will stop calculating a move if " << endl <<
+                                    "\t\tit exceeds this time." << endl << endl <<
+                "\t-T"   << endl << "\t\tSets AI to time-limited mode. If set, the AI will continue to increase the " << endl <<
+                                    "\t\tsearch depth until it runs out of time." << endl << endl <<
+                "\t-c"   << endl << "\t\tIf set, the screen will be cleared after each turn." << endl << endl <<
+                "\t-v #" << endl << "\t\tSets the verbosity. A higher number will be more verbose." << endl << endl <<
+                "\t-h"   << endl << "\t\tDisplays this help message." << endl;
+           return 0;
+        } else {
+            cout << "Unknown argument: " << argv[i] << endl;
         }
-        if (argc >= 3) {
-            g_searchdepth = atoi(argv[2]);
-        }
-        if (argc >= 4) {
-            g_gofirst = (atoi(argv[3]) == 1);
-        }
-        if (argc >= 5) {
-            g_clearscreen = (atoi(argv[4]) == 1);
-        }
-        if (argc >= 6) {
-            g_timeout = atoi(argv[5]);
-        }
-        if (argc >= 7) {
-            g_timemode = atoi(argv[6]);
-        }
-        if (argc >= 8) {
-            g_verbose = atoi(argv[7]);
-        }
-
-        cout << "OTHELLO" << endl;
-        cout << "Settings: " << endl <<
-            "  Play mode:    \t"   << (g_auto == 0 ? "manual" : "automatic") << endl <<
-            "  Player first: \t"   << (g_gofirst ? "Yes" : "No") << endl <<
-            "  Clear screen: \t"   << (g_clearscreen ? "Yes" : "No" ) << endl <<
-            "  Verbosity:    \t"   << g_verbose << endl <<
-            "  AI max depth: \t"   << g_searchdepth << (g_searchdepth == 0 ? " (based on move number)" : " (fixed)" ) << endl <<
-            "  AI timeout:   \t"   << g_timeout << " seconds." << endl;
-
-        game_start();
+        i++;
     }
+
+    cout << "OTHELLO" << endl;
+    cout << "Settings: " << endl <<
+        "  Play mode:    \t"   << (g_auto == 0 ? "manual" : "automatic") << endl <<
+        "  Player first: \t"   << (g_gofirst ? "Yes" : "No") << endl <<
+        "  Clear screen: \t"   << (g_clearscreen ? "Yes" : "No" ) << endl <<
+        "  Verbosity:    \t"   << g_verbose << endl <<
+        "  AI max depth: \t"   << g_searchdepth << (g_searchdepth == 0 ? " (based on move number)" : " (fixed)" ) << endl <<
+        "  AI timeout:   \t"   << g_timeout << " seconds." << endl <<
+        "  AI time mode: \t"   << (g_timemode ? "Time-limited" : "Depth-limited") << endl;
+
+    game_start();
     return 0;
 }

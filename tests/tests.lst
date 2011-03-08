@@ -1,34 +1,36 @@
-echo a.exe 2 | tee output/2-autodepth.out
-a.exe 2 1 | tee output/2-depth1.out
-a.exe 2 2 | tee output/2-depth2.out
-a.exe 2 3 | tee output/2-depth3.out
-a.exe 2 4 | tee output/2-depth4.out
-a.exe 2 5 | tee output/2-depth5.out
-a.exe 2 6 1 1 5 | tee output/2-depth6.out
-echo a.exe 3 | tee output/3-autodepth.out
-a.exe 3 1 | tee output/3-depth1.out
-a.exe 3 2 | tee output/3-depth2.out
-a.exe 3 3 | tee output/3-depth3.out
-a.exe 3 4 | tee output/3-depth4.out
-a.exe 3 5 | tee output/3-depth5.out
-a.exe 3 6 1 1 5 | tee output/3-depth6.out
-echo a.exe 2 0 0 | tee output/2-autodepth-rev.out
-a.exe 2 1 0 | tee output/2-depth1-rev.out
-a.exe 2 2 0 | tee output/2-depth2-rev.out
-a.exe 2 3 0 | tee output/2-depth3-rev.out
-a.exe 2 4 0 | tee output/2-depth4-rev.out
-a.exe 2 5 0 | tee output/2-depth5-rev.out
-echo a.exe 2 6 0 | tee output/2-depth6-rev.out
-echo a.exe 3 0 0 | tee output/3-autodepth-rev.out
-a.exe 3 1 0 | tee output/3-depth1-rev.out
-a.exe 3 2 0 | tee output/3-depth2-rev.out
-a.exe 3 3 0 | tee output/3-depth3-rev.out
-a.exe 3 4 0 | tee output/3-depth4-rev.out
-a.exe 3 5 0 | tee output/3-depth5-rev.out
-a.exe 3 6 0 1 5 | tee output/3-depth6-rev.out
-a.exe 2 1 1 1 5 1 | tee output/2-timebased5.out
-a.exe 2 1 1 1 10 1 | tee output/2-timebased10.out
-echo a.exe 2 1 1 1 15 1 | tee output/2-timebased15.out
-a.exe 3 1 1 1 5 1 | tee output/3-timebased5.out
-a.exe 3 1 1 1 10 1 | tee output/3-timebased10.out
-echo a.exe 3 1 1 1 15 1 | tee output/3-timebased15.out
+echo ./a.exe -m 2           | tee output/2-autodepth.out
+./a.exe -m 2 -d 1           | tee output/2-depth1.out
+./a.exe -m 2 -d 2           | tee output/2-depth2.out
+./a.exe -m 2 -d 3           | tee output/2-depth3.out
+./a.exe -m 2 -d 4           | tee output/2-depth4.out
+./a.exe -m 2 -d 5           | tee output/2-depth5.out
+echo ./a.exe -m 2 -d 6 -t 5 | tee output/2-depth6.out
+echo ./a.exe -m 3           | tee output/3-autodepth.out
+./a.exe -m 3 -d 1           | tee output/3-depth1.out
+./a.exe -m 3 -d 2           | tee output/3-depth2.out
+./a.exe -m 3 -d 3           | tee output/3-depth3.out
+./a.exe -m 3 -d 4           | tee output/3-depth4.out
+./a.exe -m 3 -d 5           | tee output/3-depth5.out
+echo ./a.exe -m 3 -d 6 -t 5 | tee output/3-depth6.out
+echo ./a.exe -m 2 -f        | tee output/2-autodepth-rev.out
+./a.exe -m 2 -d 1 -f        | tee output/2-depth1-rev.out
+./a.exe -m 2 -d 2 -f        | tee output/2-depth2-rev.out
+./a.exe -m 2 -d 3 -f        | tee output/2-depth3-rev.out
+./a.exe -m 2 -d 4 -f        | tee output/2-depth4-rev.out
+./a.exe -m 2 -d 5 -f        | tee output/2-depth5-rev.out
+echo ./a.exe -m 2 -d 6 -f   | tee output/2-depth6-rev.out
+echo ./a.exe -m 3 -d 0 -f   | tee output/3-autodepth-rev.out
+./a.exe -m 3 -d 1 -f        | tee output/3-depth1-rev.out
+./a.exe -m 3 -d 2 -f        | tee output/3-depth2-rev.out
+./a.exe -m 3 -d 3 -f        | tee output/3-depth3-rev.out
+./a.exe -m 3 -d 4 -f        | tee output/3-depth4-rev.out
+./a.exe -m 3 -d 5 -f        | tee output/3-depth5-rev.out
+echo ./a.exe -m 3 -d 6 -f   | tee output/3-depth6-rev.out
+./a.exe -m 2 -T -t 2        | tee output/2-timebased2.out
+./a.exe -m 2 -T -t 5        | tee output/2-timebased5.out
+echo ./a.exe -m 2 -T -t 10  | tee output/2-timebased10.out
+echo ./a.exe -m 2 -T -t 15  | tee output/2-timebased15.out
+./a.exe -m 3 -T -t 2        | tee output/3-timebased2.out
+./a.exe -m 3 -T -t 5        | tee output/3-timebased5.out
+echo ./a.exe -m 3 -T -t 10  | tee output/3-timebased10.out
+echo ./a.exe -m 3 -T -t 15  | tee output/3-timebased15.out
