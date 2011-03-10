@@ -3,12 +3,11 @@ const char DIRS[8][2] = {{1, 0}, {1, 1}, {0, 1}, {-1, 1}, {-1, 0}, {-1, -1}, {0,
 
 /* Overload << for outputting a vector. */
 namespace std {
-template<class A1, class A2>
-    ostream& operator<<(ostream& s, vector<A1, A2> const& vec) {
-        copy(vec.begin(), vec.end(), ostream_iterator<A1>(s, " "));
-        return s;
-    }
-
+    template<class A1, class A2>
+        ostream& operator<<(ostream& s, vector<A1, A2> const& vec) {
+            copy(vec.begin(), vec.end(), ostream_iterator<A1>(s, " "));
+            return s;
+        }
 }
 
 /* printMove
@@ -16,49 +15,49 @@ template<class A1, class A2>
  *   Ex. 0 => a1, 1 => b1, 8 => a2, etc. */
 string printMove( int move ) {
     string s;
-    s += (char)(move%SIZE + 97);
-    s += (char)('0' + move/SIZE + 1);
+    s += (char)(move%g_size + 97);
+    s += (char)('0' + move/g_size + 1);
     return s;
 }
- 
+
 /* Othello class
  *   Stores the game board. */
 class Othello {
-public:
-    typedef enum { X, B, W, P } TILE;
+    public:
+        typedef enum { X, B, W, P } TILE;
 
-    TILE * board;
+        TILE * board;
 
-    Othello();
+        Othello();
 
-    Othello( const Othello &tiles );
+        Othello( const Othello &tiles );
 
-    ~Othello();
+        ~Othello();
 
-    Othello & operator=( const Othello &rhs );
+        Othello & operator=( const Othello &rhs );
 
-    void PrintBoard();
-    bool IsValidMove( bool color, int tile );
-    Othello MakeMove( bool color, int tile );
-    void FindValidMoves( bool color, vector<int>& retVal );
-    bool GetScore( bool final = false );
+        void PrintBoard();
+        bool IsValidMove( bool color, int tile );
+        Othello MakeMove( bool color, int tile );
+        void FindValidMoves( bool color, vector<int>& retVal );
+        bool GetScore( bool final = false );
 };
 
 /* Othello constructor.
  *   Sets up the beginning state of the board. */
-Othello::Othello():board( new TILE[SIZE*SIZE] ) {  
-    for (int i = 0; i < SIZE * SIZE; i++) {
+Othello::Othello():board( new TILE[g_size*g_size] ) {  
+    for (int i = 0; i < g_size * g_size; i++) {
         board[i] = X;
     }
-    board[27] = B;
-    board[28] = W;
-    board[35] = W;
-    board[36] = B;
+    board[27] = (g_gofirst ? B : W);
+    board[28] = (g_gofirst ? W : B);
+    board[35] = (g_gofirst ? W : B);
+    board[36] = (g_gofirst ? B : W);
 }
 
 /* Othello copy constructor.
  *   Creates a copy of the board being passed in. */
-Othello::Othello( const Othello &tiles ):board( new TILE[SIZE*SIZE] ){
+Othello::Othello( const Othello &tiles ):board( new TILE[g_size*g_size] ){
     *this = tiles;
 }                              
 
@@ -72,8 +71,8 @@ Othello::~Othello() {
 Othello& Othello::operator=( const Othello &rhs ) {
     if( this != &rhs ) {
         delete [] board;
-        board = new TILE[ SIZE*SIZE ];
-        memcpy( board, rhs.board, sizeof( TILE ) * SIZE * SIZE );			
+        board = new TILE[ g_size*g_size ];
+        memcpy( board, rhs.board, sizeof( TILE ) * g_size * g_size );			
     }
     return *this;
 }
@@ -82,24 +81,24 @@ Othello& Othello::operator=( const Othello &rhs ) {
  *   Output the current state of the board. */
 void Othello::PrintBoard() {
     cout << "  a b c d e f g h";
-    for (int i = 0; i < SIZE*SIZE; i++) {
-        if (i%SIZE == 0) {
-            cout << endl << i/SIZE + 1 ;
+    for (int i = 0; i < g_size*g_size; i++) {
+        if (i%g_size == 0) {
+            cout << endl << i/g_size + 1 ;
         }
         char out;
         switch (board[i]) {
-        case 0:
-            out = '.';
-            break;
-        case 1:
-            out = '@';
-            break;
-        case 2:
-            out = 'O';
-            break;
-        case 3:
-            out = '*';
-            break;
+            case 0:
+                out = '.';
+                break;
+            case 1:
+                out = '@';
+                break;
+            case 2:
+                out = 'O';
+                break;
+            case 3:
+                out = '*';
+                break;
         }
         cout << " " << out;
     }
@@ -108,17 +107,14 @@ void Othello::PrintBoard() {
 /* IsValidMove
  *   Determines whether a given move is valid or not. */
 bool Othello::IsValidMove( bool color, int tile ) {
-    int match = 1, opp = 2;
-    if (!color) {
-        match = 2;
-        opp = 1;
-    }
+    int match = (color ? 1 : 2),
+        opp = (color ? 2 : 1);
 
     /* If the tile isn't empty, move is invalid. */
     if (board[tile] != 0 && board[tile] != 3) return false;
 
-    int x = tile%SIZE;
-    int y = tile/SIZE;
+    int x = tile%g_size;
+    int y = tile/g_size;
     int tx, ty;
     bool seenOpp, seenSame;
 
@@ -130,23 +126,24 @@ bool Othello::IsValidMove( bool color, int tile ) {
         seenSame = false;
 
         /* Continue searching until we hit an empty tile or run off the board. */
-        while (tx + DIRS[dir][0] >= 0 && ty + DIRS[dir][1] >= 0 && tx + DIRS[dir][0] < SIZE && ty + DIRS[dir][1] < SIZE &&
-               (ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0] < 64 &&
-               (board[(ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0]] != 0 &&
-                board[(ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0]] != 3)) {
+        while ( tx + DIRS[dir][0] >= 0 && ty + DIRS[dir][1] >= 0 && 
+                tx + DIRS[dir][0] < g_size && ty + DIRS[dir][1] < g_size &&
+                (ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0] < 64 &&
+                board[(ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0]] != 0 &&
+                board[(ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0]] != 3 ) {
             tx += DIRS[dir][0];
             ty += DIRS[dir][1];
 
             /* Set flags to check if we've seen a tile of the same or opposite color yet. */
-            if (board[ty*SIZE + tx] == opp && !seenSame) {
+            if (board[ty*g_size + tx] == opp && !seenSame) {
                 seenOpp = true;
-            } else if (board[ty*SIZE + tx] == match && seenOpp && !seenSame) {
+            } else if (board[ty*g_size + tx] == match && seenOpp && !seenSame) {
                 seenSame = true;
                 break;
             }
 
             /* If we find a matching tile but there hasn't been an opponent's tile in between, break. */
-            if (board[ty*SIZE + tx] == match && !seenOpp) {
+            if (board[ty*g_size + tx] == match && !seenOpp) {
                 break;
             }
         }
@@ -164,17 +161,14 @@ bool Othello::IsValidMove( bool color, int tile ) {
  *   Make a move and return the state of the board after the move. */
 Othello Othello::MakeMove( bool color, int tile ) {
     bool valid = false;
-    int match = 1, opp = 2;
-    if (!color) {
-        match = 2;
-        opp = 1;
-    }
+    int match = (color ? 1 : 2), 
+        opp = (color ? 2 : 1);
 
     /* If the tile isn't empty, do nothing. */
     if (board[tile] != 0 && board[tile] != 3) return *this;
 
-    int x = tile%SIZE;
-    int y = tile/SIZE;
+    int x = tile%g_size;
+    int y = tile/g_size;
     int tx, ty;
     bool seenOpp = false, seenSame = false;
     vector<int> toFlip, toFlipTemp;
@@ -187,22 +181,23 @@ Othello Othello::MakeMove( bool color, int tile ) {
         seenSame = false;
 
         /* Continue searching until we hit an empty tile or run off the board. */
-        while (tx + DIRS[dir][0] >= 0 && ty + DIRS[dir][1] >= 0 && tx + DIRS[dir][0] < SIZE && ty + DIRS[dir][1] < SIZE &&
-               (ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0] < 64 &&
-               (board[(ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0]] != 0 &&
-                board[(ty + DIRS[dir][1])*SIZE + tx + DIRS[dir][0]] != 3)) {
+        while ( tx + DIRS[dir][0] >= 0 && ty + DIRS[dir][1] >= 0 && 
+                tx + DIRS[dir][0] < g_size && ty + DIRS[dir][1] < g_size &&
+                (ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0] < 64 &&
+                board[(ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0]] != 0 &&
+                board[(ty + DIRS[dir][1])*g_size + tx + DIRS[dir][0]] != 3 ) {
             tx += DIRS[dir][0];
             ty += DIRS[dir][1];
 
-            if (board[ty*SIZE + tx] == opp && !seenSame) {
+            if (board[ty*g_size + tx] == opp && !seenSame) {
                 /* If we hit an opposite-colored tile, add it to the list of pieces to be flipped. */
                 seenOpp = true;
-                toFlipTemp.push_back(ty*SIZE + tx);
-            } else if (board[ty*SIZE + tx] == match && seenOpp && !seenSame) {
+                toFlipTemp.push_back(ty*g_size + tx);
+            } else if (board[ty*g_size + tx] == match && seenOpp && !seenSame) {
                 seenSame = true;
                 break;
             }
-            if (board[ty*SIZE + tx] == match && !seenOpp) {
+            if (board[ty*g_size + tx] == match && !seenOpp) {
                 break;
             }
         }
@@ -217,7 +212,7 @@ Othello Othello::MakeMove( bool color, int tile ) {
 
     /* Create a copy of the current board and change all * tiles to X. */
     Othello cpy = *this;
-    for (int i = 0; i < SIZE*SIZE; i++) {
+    for (int i = 0; i < g_size*g_size; i++) {
         if (board[i] == 3) {
             cpy.board[i] = X;
         }
@@ -240,7 +235,7 @@ Othello Othello::MakeMove( bool color, int tile ) {
  *   Determine what moves are valid and return the list. */
 void Othello::FindValidMoves( bool color, vector<int>& retVal ) {
     vector<int> moves;
-    for (int i = 0; i < SIZE*SIZE; i++) {
+    for (int i = 0; i < g_size*g_size; i++) {
         /* Clear all * tiles. */
         if (board[i] == 3) {
             board[i] = X;
@@ -262,7 +257,7 @@ void Othello::FindValidMoves( bool color, vector<int>& retVal ) {
 bool Othello::GetScore( bool final ) {
     /* Count the tiles. */
     int b = 0, w = 0;
-    for ( int i = 0; i < SIZE*SIZE; i++) {
+    for ( int i = 0; i < g_size*g_size; i++) {
         if (board[i] == 1) {
             b++;
         } else if (board[i] == 2) {
@@ -285,7 +280,8 @@ bool Othello::GetScore( bool final ) {
         return false;
     }
     /* Determine whether we've run out of moves or not. */
-    if (b + w == SIZE*SIZE) return false;
+    if (b == 0 || w == 0 || b + w == g_size*g_size) return false;
     return true;
 }
 
+class Othello;

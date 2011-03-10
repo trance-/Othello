@@ -7,88 +7,117 @@ int search_count = 0;
 
 /* Array of search depths, used to determine which search depth to use
  * based on the current turn if no depth is specified in the arguments. */
-int searchdepth[60]=	{				
-		2, 5, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5,
-		5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6,
-		6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7,
-		6, 6, 6, 6, 6, 6, 6, 7, 7, 6, 6, 6, 5, 5, 5
-	};
- 
+const int searchdepth[60]=	{				
+    2, 5, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5,
+    5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6,
+    6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7,
+    6, 6, 6, 6, 6, 6, 6, 7, 7, 6, 6, 6, 5, 5, 5
+};
+
+/* Tile weightings.
+ * The first array indicates which tile the weight is dependant on.
+ * The next three arrays indicate the weight if the dependant tile is X, Same, Opp. */
+const int weight[4][64] = {
+    {               /* Dependencies. */
+        -1, -1, -1, -1, -1, -1, -1, -1,
+        -1,  0,  2,  3,  4,  6,  7, -1,
+        -1, 15, -1, -1, -1, -1, 22, -1,
+        -1, 23, -1, -1, -1, -1, 32, -1,
+        -1, 31, -1, -1, -1, -1, 40, -1,
+        -1, 39, -1, -1, -1, -1, 46, -1,
+        -1, 55, 58, 59, 60, 61, 63, -1,
+        -1, -1, -1, -1, -1, -1, -1, -1
+    }, {            /* If dependent piece is empty. */
+        50,  4, 16, 12, 12, 16,  4, 50,
+        4, -30, -4, -5, -5, -4,-30,  4,
+        16, -4,  1,  0,  0,  1, -4, 16,		
+        12, -5,  0,  0,  0,  0, -4, 12,		
+        12, -5,  0,  0,  0,  0, -5, 12,		
+        16, -4,  1,  0,  0,  1, -4, 16,		
+        4, -30, -4, -5, -5, -4,-30,  4,
+        50,  4, 16, 12, 12, 16,  4, 50
+    }, {            /* If dependent piece is mine. */
+        50,  4, 16, 12, 12, 16,  4, 50,
+        4,   0,  0,  0,  0,  0,  0,  4,
+        16,  0,  1,  0,  0,  1,  0, 16,		
+        12,  0,  0,  0,  0,  0,  0, 12,		
+        12,  0,  0,  0,  0,  0,  0, 12,		
+        16,  0,  1,  0,  0,  1,  0, 16,		
+        4,   0,  0,  0,  0,  0,  0,  4,
+        50,  4, 16, 12, 12, 16,  4, 50
+    }, {            /* If dependent piece is opponent's. */
+        50,  4, 16, 12, 12, 16,  4, 50,
+            4,   0,  0,  0,  0,  0,  0,  4,
+            16,  0,  1,  0,  0,  1,  0, 16,		
+            12,  0,  0,  0,  0,  0,  0, 12,		
+            12,  0,  0,  0,  0,  0,  0, 12,		
+            16,  0,  1,  0,  0,  1,  0, 16,		
+            4,   0,  0,  0,  0,  0,  0,  4,
+            50,  4, 16, 12, 12, 16,  4, 50
+    }
+};
+
 /* State class
  *   Stores the calculated value for a given state of the game, and a 
  *   vector containing the possible moves. */
 class State {
-public:
-    int move;
-    vector<int> moves;
-    int b, w, value;
-    bool color;
+    public:
+        int move;
+        vector<int> moves;
+        int value;
+        bool color;
 
-    State( Othello & argBoard, bool argColor, int argMove, int b = 0, int w = 0);
+        State( Othello &argBoard, bool argColor, int argMove);
 
-    friend class Othello;
+        friend class Othello;
 };
 
 /* State constructor
  *   Calculates the value of the given game state based on the board passed in via the arguments.
  *   Also determines the possible moves that can be made. */
-State::State( Othello & argBoard, bool argColor, int argMove, int b, int w):
-    move( argMove ), color( argColor ), b( 0 ), w( 0 ), value( 0 ), moves( vector<int>() ) {
-        int bx = 0, wx = 0;
+State::State( Othello &argBoard, bool argColor, int argMove):
+    move( argMove ), color( argColor ), value( 0 ), moves( vector<int>() ) {
+        int b = 0, w = 0, bx = 0, wx = 0;
         // Determine what moves can be made
         argBoard.FindValidMoves( color, moves );
 
-        // Set up weights for determining value
-        static int
-            val1[3]={-30,0,0},	/* value of (1,1) if (0,0)=0,1,2 */
-            val2[3]={-4,0,0},	/* value of (1,2) if (0,2)=0,1,2 */
-            val3[3]={-5,0,0};	/* value of (1,3) if (0,3)=0,1,2 */
-        int v1 = val1[argBoard.board[0]];
-        int v2 = val1[argBoard.board[7]];
-        int v3 = val1[argBoard.board[55]];
-        int v4 = val1[argBoard.board[63]];
-        int v5 = val2[argBoard.board[2]];
-        int v6 = val2[argBoard.board[6]];
-        int v7 = val2[argBoard.board[15]];
-        int v8 = val2[argBoard.board[22]];
-        int v9 = val2[argBoard.board[39]];
-        int v10 = val2[argBoard.board[46]];
-        int v11 = val2[argBoard.board[58]];
-        int v12 = val2[argBoard.board[61]];
-        int v13 = val3[argBoard.board[3]];
-        int v14 = val3[argBoard.board[4]];
-        int v15 = val3[argBoard.board[23]];
-        int v16 = val3[argBoard.board[32]];
-        int v17 = val3[argBoard.board[31]];
-        int v18 = val3[argBoard.board[40]];
-        int v19 = val3[argBoard.board[59]];
-        int v20 = val3[argBoard.board[60]];
-
-        int weight[SIZE*SIZE] = { 
-            50,  4, 16, 12, 12, 16,  4, 50,
-            4,  v1, v5,v13,v14, v6, v2,  4,
-            16, v7,  1,  0,  0,  1, v8, 16,		
-            12,v15,  0,  0,  0,  0,v16, 12,		
-            12,v17,  0,  0,  0,  0,v18, 12,		
-            16, v9,  1,  0,  0,  1,v10, 16,		
-            4,  v3,v11,v19,v20,v12, v4,  4,
-            50,  4, 16, 12, 12, 16,  4, 50
-        };
-
         /* Count the pieces. */
-        for (int i = 0; i < SIZE*SIZE; i++) {
+        for (int i = 0; i < g_size*g_size; i++) {
+            int j = 1, m = (color ? -1 : 1);
+            if (weight[0][i] >= 0) {
+                switch (argBoard.board[weight[0][i]]) {
+                    case 0:
+                    case 3:
+                        j = 1;
+                        break;
+                    case 1:
+                        j = (color ? 2 : 3);
+                        break;
+                    case 2:
+                        j = (color ? 3 : 2);
+                        break;
+                }
+            }
             if (argBoard.board[i] == 1) {
-                bx += weight[i];
+                bx += weight[j][i];
                 b++;
             } else if (argBoard.board[i] == 2) {
-                wx += weight[i];
+                wx += weight[j][i];
                 w++;
+            }
+            if (g_verbose == 1) {
+                cout << "Piece " << i << ": " << argBoard.board[i] << 
+                    "Value: " << wx - bx << ", Weight: " << m*weight[j][i] << 
+                    ", bx: " << bx << ", wx: " << wx << 
+                    ", b: " << b << ", w: " << w << endl;
             }
         }
 
         /* Ensure maximal win by throwing off weighting for perfect game. */
-        if (b == 64) bx += 500;
-        if (w == 64) wx += 500;
+        if (w == 0) bx += 500;
+        if (b == 0) wx += 500;
+        if (b == 64) bx += 200;
+        if (w == 64) wx += 200;
 
         /* Calculate value. +ve value good for opponent, -ve value good for player. */
         value = wx - bx;
@@ -133,15 +162,14 @@ pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, i
 
     /* Otherwise, create children for each possible move. */
     for (int i = 0; i < (*itr).moves.size(); i++) {
-        Othello tmp (board.MakeMove( (*itr).color, (*itr).moves[i] ));
-        State newState ( tmp, !(*itr).color, (*itr).moves[i] );
+        Othello newBoard = board.MakeMove( (*itr).color, (*itr).moves[i] );
+        State newState ( newBoard, !(*itr).color, (*itr).moves[i] );
         itr.insert( newState );
         tree_count++;
     }
     /* If there are no possible moves, create a state for "pass". */
     if ((*itr).moves.size() == 0) {
-        Othello tmp (board.MakeMove( (*itr).color, 0 ));
-        State newState ( tmp, !(*itr).color, 0 );
+        State newState ( board, !(*itr).color, 0 );
         itr.insert( newState );
         tree_count++;
     }
@@ -197,19 +225,19 @@ pair<int, int> gensearch( GameTree<State>::iterator itr, Othello board, int d, i
 /* timesearch
  *   Does a time-limited search. It starts with a depth of 1, and continues to increase the depth
  *   and repeat the search until it runs out of time. */
-pair<int, int> timesearch( GameTree<State>::iterator itr, Othello board, int color) {
+pair<int, int> timesearch( GameTree<State>::iterator itr, Othello & board, int color) {
     /* Initialize the clock. */
     clock_t temp = clock() - init;
 
-    int d = (g_shrinkwindow ? 1 : 1);
+    int d = 1;
     pair<int, int> optimal;
-    
-    int window = 1000;
+
+    int window = 10000;
 
     double curtime = (double)temp / ((double)CLOCKS_PER_SEC);
     while (curtime < g_timeout) { /* Loop until we run out of time. */
         /* Run the search again and increase depth. */
-        pair<int, int> tempmove = gensearch( itr, board, d++, -window, 1000, color);
+        pair<int, int> tempmove = gensearch( itr, board, d++, -window, 10000, color);
 
         temp = clock() - init;
         curtime = (double)temp / ((double)CLOCKS_PER_SEC);
@@ -222,15 +250,17 @@ pair<int, int> timesearch( GameTree<State>::iterator itr, Othello board, int col
              * branches of the tree if they are better than the current best. */
             if (g_shrinkwindow) {
                 window = min(window, abs(tempmove.first));
-                if (g_verbose >= 1) 
-                    cout << "Time remaining. Increasing depth to " << d << " and shrinking window to " << window << "." << endl;
-            } else {
-                if (g_verbose >= 1) 
-                    cout << "Time remaining. Increasing depth to " << d << "." << endl;
+            }    
+            if (g_verbose >= 1) {
+                cout << "Time remaining. Increasing depth to " << d;
+                if (g_shrinkwindow) {
+                    cout << " and shrinking window to " << window;
+                }
+                cout << "." << endl;
             }
         }
     }
-    cout << "Final search depth: " << (g_shrinkwindow ? d - 2 : d - 1) << endl;
+    cout << "Final search depth: " << d - 1 << endl;
     return optimal;
 }
 
@@ -251,7 +281,7 @@ int ai_initialize( Othello board, bool color ) {
     pair<int, int> optimal;
     if (!g_timemode) { /* Depth-limited search. */
         cout << "Depth: " << depth << endl;
-        optimal = gensearch( itr, board, depth, -1000, 1000, color ? -1 : 1);
+        optimal = gensearch( itr, board, depth, -10000, 10000, color ? -1 : 1);
     } else {           /* Time-limited search. */
         optimal = timesearch( itr, board, color ? -1 : 1);
     }
@@ -259,7 +289,9 @@ int ai_initialize( Othello board, bool color ) {
     final=clock()-init;
     double totalTime = (double)final / ((double)CLOCKS_PER_SEC);
 
-    cout << endl << "Examined " << search_count << "/" << tree_count << " game states in " << totalTime << " s" << ((totalTime > g_timeout && !g_timemode) ? " (timed out)." : ".") << endl;
+    cout << endl << "Examined " << search_count << "/" << tree_count <<
+        " game states in " << totalTime << " s" <<
+        ((totalTime > g_timeout && !g_timemode) ? " (timed out)." : ".") << endl;
 
     return optimal.second;
 }

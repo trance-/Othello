@@ -10,7 +10,8 @@
 #include "gametree.h"
 
 /* Dimensions of the game board. */
-#define SIZE (8)
+//#define g_size (8)
+int g_size = 8;
 
 /* Global variables. */
 int g_auto = 0;
@@ -25,11 +26,9 @@ bool g_shrinkwindow = true;
 
 using namespace std;
 using namespace Data_structures;
+
 #include "othello.h"
-
-class Othello;
 #include "ai.h"
-
 
 /* clear_screen
  *   Clears the console. */
@@ -98,16 +97,16 @@ int game_start() {
                         do { /* Wait until the user inputs a valid move. */
                             cout << endl;
                             string input = "";
-                            
+
                             /* Get the move and convert it to coordinates. */
                             getline(cin, input);
                             int x = (int)input[0] - 97;
                             int y = (int)input[1] - 49;
 
-                            pos = y*SIZE + x;
+                            pos = y*g_size + x;
 
                             /* Check if the move is valid. */
-                            if (board.board[pos] != 3) {
+                            if (pos < 0 || pos > 63 || board.board[pos] != 3) {
                                 cout << endl << "Invalid move." << endl;
                             } else {
                                 moveGood = true;
@@ -141,8 +140,7 @@ int game_start() {
             /* Check if the move is valid. */
             if (board.IsValidMove( color, pos )) {
                 /* Update the board. */
-                Othello tmpBoard ( board.MakeMove( color, pos ));
-                board = tmpBoard;
+                board = board.MakeMove( color, pos );
             } else {
                 if (moves.size() > 0) { /* WTF? This shouldn't happen. */
                     cout << "Fuck." << endl;
@@ -166,19 +164,19 @@ int game_start() {
  *   Display the halp message. */
 void halp() {
     cout << "Othello Options: " << endl <<
-        "\t-m #" << endl << "\t\tSets the play mode." << endl << 
-        "\t\t0 = manual; 1 = randomly select a move;" << endl <<
-        "\t\t2 = always select first move; 3 = AI controlled." << endl << endl <<
-        "\t-f"   << endl << "\t\tIf set, the opponent will get the first move. Otherwise, the player will go first." << endl << endl <<
-        "\t-d #" << endl << "\t\tSets the AI search depth. If 0, the AI will select a depth based on the current move number." << endl <<
-                            "\t\tIf -1, the AI will randomly pick moves." << endl << endl << 
-        "\t-t #" << endl << "\t\tSets the AI search timeout, in seconds. The AI will stop calculating a move if " << endl <<
-                            "\t\tit exceeds this time." << endl << endl <<
-        "\t-T"   << endl << "\t\tSets AI to time-limited mode. If set, the AI will continue to increase the " << endl <<
-                            "\t\tsearch depth until it runs out of time." << endl << endl <<
-        "\t-w"   << endl << "\t\tDisables shrinking search window in time-limited search mode." << endl <<
-        "\t-c"   << endl << "\t\tIf set, the screen will be cleared after each turn." << endl << endl <<
-        "\t-v #" << endl << "\t\tSets the verbosity. A higher number will be more verbose." << endl << endl <<
+        "\t-m #" << endl << "\t\tSets the play mode.\n" << 
+        "\t\t0 = manual; 1 = randomly select a move;\n" << 
+        "\t\t2 = always select first move; 3 = AI controlled.\n\n" << 
+        "\t-f"   << endl << "\t\tIf set, the opponent will get the first move. Otherwise, the player will go first.\n\n" <<
+        "\t-d #" << endl << "\t\tSets the AI search depth. If 0, the AI will select a depth based on the move number.\n" << 
+        "\t\tIf -1, the AI will randomly pick moves.\n\n" << 
+        "\t-t #" << endl << "\t\tSets the AI search timeout, in seconds. The AI will stop calculating a move if\n" << 
+        "\t\tit exceeds this time.\n\n" << 
+        "\t-T"   << endl << "\t\tSets AI to time-limited mode. If set, the AI will continue to increase the\n " << 
+        "\t\tsearch depth until it runs out of time.\n\n" << 
+        "\t-w"   << endl << "\t\tDisables shrinking search window in time-limited search mode.\n" << 
+        "\t-c"   << endl << "\t\tIf set, the screen will be cleared after each turn.\n\n" << 
+        "\t-v #" << endl << "\t\tSets the verbosity. A higher number will be more verbose.\n\n" << 
         "\t-h"   << endl << "\t\tDisplays this help message." << endl;
 }
 
